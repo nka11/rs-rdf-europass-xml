@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en">
+  <DocumentInfo>
+    <DocumentType>ECV</DocumentType>
+    <CreationDate>2026-11-02T10:00:00Z</CreationDate>
+    <LastUpdateDate>2026-11-02T10:00:00Z</LastUpdateDate>
+    <XSDVersion>V3.4</XSDVersion>
+    <Generator>example.org</Generator>
+    <Comment>Source: https://example.org/cv</Comment>
+  </DocumentInfo>
+  <LearnerInfo>
+    <Identification>
+      <PersonName>
+        <FirstName>Alex</FirstName>
+        <Surname>Martin</Surname>
+      </PersonName>
+      <ContactInfo>
+        <Email>
+          <Contact>alex.martin@example.org</Contact>
+        </Email>
+        <WebsiteList>
+          <Website>
+            <Contact>https://github.com/example-alex</Contact>
+            <Use>
+              <Code>portfolio</Code>
+              <Label>GitHub</Label>
+            </Use>
+          </Website>
+          <Website>
+            <Contact>https://example.org/cv</Contact>
+            <Use>
+              <Code>portfolio</Code>
+              <Label>CV</Label>
+            </Use>
+          </Website>
+        </WebsiteList>
+      </ContactInfo>
+    </Identification>
+    <Headline>
+      <Type>
+        <Code>personal_statement</Code>
+        <Label>Personal statement</Label>
+      </Type>
+      <Description>
+        <Label>Full-Cycle Product Engineer | Turning Ideas into Impactful Products
+
+I help visionaries transform their ideas into projects to ultimately create fully functional products.
+
+With 20+ years of experience in software and infrastructure engineering, I specialize in:
+- Design &amp; Architecture: Requirements analysis, UML, business consulting.
+- Full-Stack Development: PHP, Java, Python, C#, JavaScript/TypeScript, React, Vue.
+- Deployment &amp; Industrialization: Packaging, CI/CD, and managing complex IT environments, including containerized architectures and strategic migration projects.
+
+I am highly proficient with cloud platforms (GCP, Azure, Scaleway, OVH, AWS), Infrastructure-as-Code (Terraform, Ansible), and security (networks, certificates, RBAC, SSO/IAM), with hands-on experience across both on-premises and cloud infrastructures.
+
+I also bring extensive project management experience, coordinating development, architecture, security, and production teams. I excel at delivering solutions in constrained environments (load, compliance, FinOps) and defining clear migration roadmaps.
+
+My approach is defined by rigor, cross-team collaboration, and the ability to clearly document and communicate technical choices.</Label>
+      </Description>
+    </Headline>
+    <WorkExperienceList>
+      <WorkExperience>
+        <Period>
+          <From year="2026" month="--05"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Enterprise Architect — Sovereign mobility data space (part-time)</Label>
+        </Position>
+        <Activities>Enterprise Architect (part-time) mission within Dataspace-Y, the European sovereign data space founded by Airline One, Airports Group, Rail Operator, Carmaker and Shipping Line, covering 4 verticals: transport, mobility, tourism and logistics.
+Definition of the enterprise architecture vision and roadmap for a federated multi-actor ecosystem, leveraging TOGAF and ArchiMate frameworks, the Gaia-X / IDSA reference architecture and the Dataspace Protocol. Compliance by design: NIS2, DORA and GDPR embedded from inception.
+
+Enterprise Architecture for the sovereign mobility data space (2026-05 - present)
+- Definition of the enterprise architecture vision and roadmap aligning business, data, application and infrastructure layers.
+- Capability mapping and architecture principles for a federated multi-actor ecosystem.
+- Design of sovereignty connectors (Dataspace Protocol, EDC) and Gaia-X self-descriptions.
+- Cross-sector semantic interoperability models (transport, mobility, tourism, logistics).
+- Compliance by design: NIS2, DORA, GDPR embedded into component design.
+- Stakeholder alignment: architecture board, federated governance, technology selection and PoCs.
+Skills: RGPD, DORA, NIS2, Regulatory and Certification Compliance, IDSA / Dataspace Protocol, Gaia-X, Data Spaces, ArchiMate, TOGAF, Enterprise Architecture</Activities>
+        <Employer>
+          <Name>Dataspace-Y</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--11"/>
+          <To year="2026" month="--02"/>
+        </Period>
+        <Position>
+          <Label>Web Application Architect</Label>
+        </Position>
+        <Activities>Full technical audit of example.lu website - Senior Web Application Architect (2025-11 - 2026-02)
+Comprehensive technical audit of the example.lu web application on behalf of Telco Corp.
+- Architecture review: analysis of application architecture, technology choices and scalability.
+- Security audit: vulnerability identification, review of authentication and access management practices.
+- Performance audit: response time analysis, rendering and content delivery optimization.
+- Strategic recommendations and improvement roadmap.
+Skills: Software Quality Assurance, Regulatory and Certification Compliance, OIDC, SSO, Load Balancing, CDN (Content Delivery Network), TCP/IP networking, HTTP, Risk Management, Risk and Compliance Management, Software Architecture</Activities>
+        <Employer>
+          <Name>Telco Corp</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--10"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>AI Augmented Infrastructure and Compliance Architect (part-time)</Label>
+        </Position>
+        <Activities>Infrastructure and Compliance Architect (2025-10 - present)
+
+Sovereign platform for AI-native train driving assistant (2025-10 - present)
+Design and deployment of a sovereign infrastructure for an AI-based train driving assistant, free from vendor lock-in, aligned with ISO 27001.
+- Selection and integration of exclusively open-source components to ensure technological independence.
+- Implementation of the information security governance framework (ISO 27001).
+- Architecture ensuring full portability and interoperability.
+- Infrastructure tailored to AI workloads with processing traceability and auditability.
+Skills: ISO/27001, Regulatory and Certification Compliance, Antigravity, Software Quality Assurance, Gemini (Google), Claude AI (Anthropic), Libvirt / KVM, Docker, Linux, Ansible</Activities>
+        <Employer>
+          <Name>Tractio Labs</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--09"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Part-time Teacher</Label>
+        </Position>
+        <Activities>TA for advanded virtualization module (3rd year) (2025-09 - 2025-12)
+Advanced course on virtualization technologies: virtual network hardening, clustering, securing operations.
+Skills: TCP/IP networking, Virtualization &amp; Hypervisors, Kubernetes, Docker, Linux, Pedagogy
+
+Teacher for application maintenance module (3rd year) (2026-01 - 2026-04)
+Teaching application maintenance: version control, continuous integration, bug tracking, refactoring, testing and application lifecycle management.
+Skills: Programming, Software Quality Assurance, CI/CD, git, Pedagogy
+
+TA for virtualization module (2nd year) (2026-01 - 2026-04)
+Introduction to virtualization technologies: virtual machine management with Libvirt/KVM, automated provisioning with Vagrant, containerization with Docker.
+Skills: Virtualization &amp; Hypervisors, Docker, Vagrant, Libvirt / KVM, Linux, Pedagogy</Activities>
+        <Employer>
+          <Name>Université de Exemple - Campus Nord - BUT Informatique</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--01"/>
+          <To year="2025" month="--06"/>
+        </Period>
+        <Position>
+          <Label>Part-time CISO</Label>
+        </Position>
+        <Activities>Outsourced CISO (2025-01 - 2025-06)
+
+Outsourced CISO Management (2025-01 - 2025-06)
+Definition and operational management of the IS security policy as outsourced CISO.
+- Establishment of effective cyber governance with rituals and indicators.
+- Continuous risk monitoring and security audit coordination.
+- Support for NIS2 and GDPR compliance.
+- Direct contribution to the company's operational resilience.
+Skills: JIRA, Project management, EBIOS-RM, RGPD, NIS2, Regulatory and Certification Compliance</Activities>
+        <Employer>
+          <Name>Interpret Services</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2024" month="--06"/>
+          <To year="2024" month="--12"/>
+        </Period>
+        <Position>
+          <Label>Transition CTO</Label>
+        </Position>
+        <Activities>Interim CTO (2024-06 - 2024-12)
+
+Technical Recovery and Blockchain Optimization (2024-06 - 2024-12)
+Recovery and optimization of a blockchain project after the departure of the main developer.
+- Developed developer documentation and operational procedures.
+- Implemented multi-threaded architecture for blockchain processing, increasing throughput by 400% without additional resources.
+- Developed roadmap to achieve strategic compliance.
+Skills: RabbitMQ, Python, CI/CD, Ansible, Ethereum, postgreSQL, Solana, Blockchain, Software Quality Assurance, Rust, Project management</Activities>
+        <Employer>
+          <Name>Winstar Games</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2024" month="--06"/>
+          <To year="2024" month="--12"/>
+        </Period>
+        <Position>
+          <Label>GRC Consultant</Label>
+        </Position>
+        <Activities>Cybersecurity Maturity Audit and Compliance (2024-06 - 2024-12)
+Comprehensive cybersecurity maturity and IS security policy audit for an SME in the interpreting sector.
+- Risk mapping using the EBIOS RM methodology.
+- Identification of strengths and vulnerabilities in the cyber posture.
+- Pragmatic strategic recommendations tailored to the company's context.
+- Actionable roadmap to achieve NIS2 and GDPR compliance.
+Skills: EBIOS-RM, RGPD, NIS2, Regulatory and Certification Compliance</Activities>
+        <Employer>
+          <Name>Interpret Services</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2024" month="--06"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Founder</Label>
+        </Position>
+        <Activities>End-to-end IT Consultancy and Digital Development (2024-06 - present)
+Creation and development of Founder Studio, an IT consultancy and digital development services company.
+- Implemented an identity provider (OIDC) ensuring secure, reliable, and controlled SSO.
+- Developed a custom CRM to streamline lead management and prospecting.
+- Developed a tailored ERP to optimize business processes and accelerate decision-making.
+- MCP protocol integration for AI assistance.
+Skills: NodeJS, github, Python, Typescript, postgreSQL, Rust, Software Quality Assurance, OIDC, Linux, VueJS, IAM, Project management</Activities>
+        <Employer>
+          <Name>Founder Studio</Name>
+          <ContactInfo>
+            <Website>
+              <Contact>https://github.com/example-studio/</Contact>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2024" month="--01"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Part-time CTO</Label>
+        </Position>
+        <Activities>Operational Continuity and CI/CD Industrialization (2024-01 - present)
+Technical leadership takeover after the departure of the main developer to ensure operational continuity.
+- Retro-engineering and comprehensive documentation to make .NET and mobile developers autonomous.
+- Implemented automated CI/CD pipeline (GitHub Actions → Ikoula), reducing deployment time and errors.
+- Architecture and strategy guidance to ensure a robust and scalable technical roadmap.
+Skills: Angular, github, Typescript, .net/C#, Software Quality Assurance, CI/CD, mySQL, Project management</Activities>
+        <Employer>
+          <Name>RoadNotes</Name>
+          <ContactInfo>
+            <Website>
+              <Contact>https://www.roadnotes.example/</Contact>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2023" month="--10"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Solution Architect</Label>
+        </Position>
+        <Activities>Digital Strategy and Web Platform (2023-10 - present)
+Development and implementation of the digital strategy to enhance visibility and business efficiency for Novembre Studio.
+- Designed and deployed the website from scratch with a scalable, high-performance, and secure architecture.
+- Integrated SSO with CRM for a seamless user experience.
+- Implemented tailored communication and lead tracking tools to accelerate sales prospecting.
+Skills: NodeJS, github, Python, Typescript, postgreSQL, OIDC, VueJS, IAM, Project management</Activities>
+        <Employer>
+          <Name>Novembre Studio</Name>
+          <ContactInfo>
+            <Website>
+              <Contact>https://novembre.example/</Contact>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2017" month="--06"/>
+          <To year="2023" month="--09"/>
+        </Period>
+        <Position>
+          <Label>Lead DevSecOps</Label>
+        </Position>
+        <Activities>Server Migration to New Datacenter (2017-04 - 2018-08)
+Datacenter migration project management: transition of ~50 hypervisors to a more modern and secure datacenter to improve service resilience.
+
+    Key responsibilities:
+- Project structuring and management of multi-workstream initiative (WAN/LAN, servers, hosting)
+- Technical coordination: critical application inventory, network/CDN/load balancer configuration review
+- Risk management and business scenarios: disaster recovery failover/degraded mode rehearsals
+- Project governance, reporting and budget tracking
+- Legacy datacenter exit management
+- Production restart supervision followed by disaster recovery site migration
+Skills: Linux, Risk Management, Budget Management, Disaster Recovery &amp; Business Continuity, CDN (Content Delivery Network), Load Balancing, TCP/IP networking, Virtualization &amp; Hypervisors, Datacenter Infrastructure, Project management
+
+Federated authentication integration (2017-11 - 2023-09)
+Migrating SAML and OIDC delegations from ISAM to AzureAD (2022-now)
+            Integration of the IBM  solution ISAM for SSO and implementation of an identity management policy.(2017-2021)
+            Administration and management of the authentication stack with openLDAP.
+            Priority to OIDC as the federation protocol when available.
+            End user support tooling app modernization with nodejs : Rewrite with React.
+            Integration of the different solutions to delegate authentication to the central solution (LDAP or with SAML or OIDC federation)
+            Setup and exploitation of accounts synchronization solutions (Microsoft MIM/FIM, IBM ISDI)
+Skills: Software Quality Assurance, Python, Javascript, ReactJS, NodeJS, postgreSQL, AzureAD (EntraID), LDAP, Linux, Docker, Gitlab, Ansible, SAML, oAuth, OIDC, IBM ISAM, IAM, SSO, Project management
+
+Tech Lead secOps Feature Team (2021-11 - 2022-05)
+At the initiative of the creation of the SecOps FeatureTeam of Holiday Resorts, led by the CISO.
+            Team design, mission &amp; governance definition, advocacy for convincing direction comitee to adopt an agile organization which will address security compliance   and infrastructure design.
+            Support the PO (the CISO) in a SCRUM approach to coordinate the work of the Holiday Resorts infrastructure teams. (Role of agile coach/scrum mentor)
+            Implementation in JIRA Cloud (Automations, Workflows, gitlab integration)
+            integration of security equipment and tools cooperating with the CISO
+Skills: Software Quality Assurance, Source Control Management, CI/CD, git, Docker, Linux, Ansible, Regulatory and Certification Compliance, Risk and Compliance Management, JIRA, Agile project management, Project management
+
+Project Road99 (2022-10 - 2023-09)
+ROAD 99 stands for Reloaded Organization and Architecture of Data, 99 is the lucky number of the Holiday Resorts company. In this ambitious project, Holiday Resorts redesigned its entire Data analysis stack with an event-driven data propagation Architecture. The events emitted from all the operational components of the IT ecosystem will then be collected and processed on the GCP cloud platform to offer DATA users an intuitive and self-explainatory environment to work with their DATA (Reporting, previsions, etc…).
+- Tech Lead and PO of the infrastructure stream (3 devOps)
+- Design The GCP landing zone integrated with Holiday Resorts’s legacy infrastructure, using IaC and CI/CD with gitlab
+- Azure Landing Zone definition for Holiday Resorts's office architecture simplification
+- Create governance documentation and link with Azure AD for the SSO and IAM (Users)
+- Provide blueprints for various types of projects (REST API, Scheduled batches, Event-driven data propagation, Machine Learning Pipelines, Transactional Inference) to perform automated configuration and deployment (Project templates including IaC and CI/CD toolbox with an accurate documentation).
+Skills: Python, Kafka, Linux, Software Quality Assurance, Gitlab, Structuring information, Terraform, Ansible, postgreSQL, Docker, Artificial Neural Networks, AI Fundamentals, noSQL, git, SSO, IAM, AzureAD (EntraID), Azure, GCP, Cloud Computing, Software Architecture, Agile project management, Project management</Activities>
+        <Employer>
+          <Name>Holiday Resorts SA</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2013" month="--09"/>
+          <To year="2015" month="--06"/>
+        </Period>
+        <Position>
+          <Label>Teacher Assistant IUT GE2I Exempleville</Label>
+        </Position>
+        <Activities>Java programming (2013-09 - 2014-05)
+Advanced Java application programming course: introduction to the SDK and the Java 8 libraries
+Skills: Android, Pedagogy, Java</Activities>
+        <Employer>
+          <Name>Université Exemple Est</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2013" month="--09"/>
+          <To year="2015" month="--06"/>
+        </Period>
+        <Position>
+          <Label>Teacher Assistant IUT Informatique Exempleville</Label>
+        </Position>
+        <Activities>Android applications programming (2013-09 - 2014-05)
+Advanced Android application programming course: SDK and Android API 3 and 4
+Skills: Android, Pedagogy, Java
+
+Teacher assistant for Systems Architecture (2014-09 - 2015-06)
+TA for Unix system, assembly programming ARM / Intel
+Skills: Linux, Pedagogy, C, Assembleur ARM, Assembleur x86</Activities>
+        <Employer>
+          <Name>Université Exemple Est</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2011" month="--06"/>
+          <To year="2017" month="--06"/>
+        </Period>
+        <Position>
+          <Label>Lead DevOps</Label>
+        </Position>
+        <Activities>Migration du warehouse de DB2/Z vers DB2 LUW (2012-03 - 2012-12)
+- Migration de la base de données DB2 warehouse de z/OS vers Linux.
+- Adaptation des processus de livraison (Schema et procédures stockées).
+- Migration des programmes COBOL de z/OS vers linux.
+- Mise en place d'une chaîne de build et d'une procédure de déploiement pour les programmes COBOL.
+Skills: Software Quality Assurance, Source Control Management, DB2, z/OS, Linux, Jenkins, git, Cobol, Project management
+
+Migration from zOS to Linux (2013-03 - 2015-09)
+In charge of setting up communications with other systems, and tuning the application runtime. Fully handled RACF security migration to an OpenLDAP system and created processes and tools for administrators support team.
+        Technical support while migration on DB2 system from z/OS to Linux, in charge of migrating COBOL to openCOBOL, managing change for developpers, providing new tooling and supply chain (with gitlab/rmp &amp; jenkins).
+        Created a transaction monitoring system with nodejs, based on logs output.
+        Crafted an identity management application with nodejs for the end user support teams.
+Skills: Software Quality Assurance, IAM, Jenkins, Javascript, NodeJS, Natural, z/OS, git, Linux, RACF, LDAP, Project management
+
+Projet 'Customer Experience Optimization' (2016-06 - 2019-10)
+Mise en oeuvre d'une stratégie de propagation entre le CRM Dynamics et le site central DB2.
+    Intégration de la solution IBM ISAM pour le SSO SAML et OIDC entre les différents composants du projet
+- Architecture projet : Cadrage, Choix d'un outil de CRM, Conception d'une experience unifiée avec le Holiday Resorts Resa System.
+Skills: Java, Microsoft Dynamics, LDAP, Docker, Gitlab, SAML, OIDC, DB2, IBM ISAM, IAM, SSO, Structuring information, Software Architecture, Project management</Activities>
+        <Employer>
+          <Name>Holiday Resorts SA</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2005" month="--06"/>
+          <To year="2011" month="--06"/>
+        </Period>
+        <Position>
+          <Label>Senior Technical Architect</Label>
+        </Position>
+        <Activities>Industrialisation et controle qualité du developpement procstock DB2/MVS
+Conception de l'architecture technique et des procédures de livraisons de procédures stockées DB2 entre les différents environnements dans un DB2 z/OS.
+        Spécifications technique détaillée.
+        Packaging, Déploiement et suivi d'exploitation.
+Skills: Software Quality Assurance, z/OS, Linux, Jenkins, git, SQL, DB2</Activities>
+        <Employer>
+          <Name>Holiday Resorts SA</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2001" month="--06"/>
+          <To year="2005" month="--06"/>
+        </Period>
+        <Position>
+          <Label>Technical Architect</Label>
+        </Position>
+        <Activities>Integration PeopleSoft on prem
+Migration SIRH legacy sur z/OS vers la plate forme PeopleSoft/aix.
+        Défi technique compte tenu de l'environnement assez exotique pour l'éditeur et l'intégrateur.
+Skills: DB2, AIX, SQL
+
+Controle qualité, packaging et deploiement J2EE
+Rôle pivot entre les équipes de dev et d'exploitation.
+- Preparation des livraisons
+- Assistance au debugging
+Skills: DevOps, Software Quality Assurance, DB2, Linux, SQL, CVS
+
+Application 'Horizon' Centre d'Appels
+Conception de l'architecture technique et logicielle d'un couplage téléphonie/informatique.
+        Spécifications technique détaillée.
+        Packaging, Déploiement et suivi d'exploitation.
+Skills: Structuring information, Software Quality Assurance, DevOps, Jenkins, Full Stack Development, Java, CVS, SQL, DB2, UML, Software Architecture, Project management</Activities>
+        <Employer>
+          <Name>Holiday Resorts SA</Name>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2000" month="--01"/>
+          <To year="2001" month="--01"/>
+        </Period>
+        <Position>
+          <Label>Operations Engineer</Label>
+        </Position>
+        <Activities>Monitoring, deployment, and operation of critical web applications.
+- Ensured stability and service availability.
+- Early experience on Linux and Solaris environments, building strong operational discipline.
+Skills: Solaris, Linux, Java</Activities>
+        <Employer>
+          <Name>BetaSystems</Name>
+        </Employer>
+      </WorkExperience>
+    </WorkExperienceList>
+    <EducationList>
+      <Education>
+        <Period>
+          <From year="1996" month="--09"/>
+          <To year="1998" month="--06"/>
+        </Period>
+        <Title>DUT Informatique</Title>
+        <Activities>Stage de fin d'études au laboratoire a university laboratory
+Au sein du Laboratoire de Recherche de Exemple Est, spécialisé dans la recherche en réseaux de neurones.
+    Implementation d'un mini jeu de plateau
+    Conception d'un moteur d'assertions pour valider le déplacement des pièces.
+    Conception d'un algorithme de type arbre de décision pour que l'humain puisse jouer contre la machine
+Skills: Software Architecture, C, Artificial Neural Networks, AI Fundamentals</Activities>
+        <Organisation>
+          <Name>IUT Exemple Est</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Exempleville</Municipality>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Organisation>
+        <Level>
+          <Code>5</Code>
+          <Label>Diplôme Universitaire de Technologie</Label>
+        </Level>
+      </Education>
+      <Education>
+        <Period>
+          <To year="1996" month="--06"/>
+        </Period>
+        <Title>Bac S option Technologie</Title>
+        <Organisation>
+          <Name>Lycée Jean Exemple</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Exempleville</Municipality>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Organisation>
+        <Level>
+          <Code>4</Code>
+          <Label>Baccalauréat Scientifique</Label>
+        </Level>
+      </Education>
+    </EducationList>
+    <Skills>
+      <Linguistic>
+        <MotherTongueList>
+          <MotherTongue>
+            <Description>
+              <Code>fr</Code>
+              <Label>French</Label>
+            </Description>
+          </MotherTongue>
+        </MotherTongueList>
+        <ForeignLanguageList>
+          <ForeignLanguage>
+            <Description>
+              <Code>en</Code>
+              <Label>English (Bilingual)</Label>
+            </Description>
+          </ForeignLanguage>
+        </ForeignLanguageList>
+      </Linguistic>
+      <Organisational>
+        <Description>Project management, Agile project management, JIRA, Budget Management</Description>
+      </Organisational>
+      <JobRelated>
+        <Description>Risk and Compliance Management, Software Quality Assurance, CI/CD, Software Architecture, Regulatory and Certification Compliance, OIDC, Pedagogy, Enterprise Architecture, IAM, SAML, Risk Management, SSO, RGPD, Jenkins, NIS2, LDAP, Gitlab, UML, DORA, EBIOS-RM, TOGAF, ArchiMate, IBM ISAM, ISO/27001, oAuth, RACF</Description>
+      </JobRelated>
+      <Computer>
+        <Description>Programming, DevOps, Javascript, Procedural, Linux, Object Oriented, Source Control Management, SGBDR, git, Structuring information, TCP/IP networking, Cloud Computing, Docker, Python, AI Fundamentals, Virtualization &amp; Hypervisors, postgreSQL, Azure, DB2, Data Spaces, Java, SQL, NodeJS, github, Ansible, Blockchain, EventBUS, Typescript, Algorithmics, C, noSQL, z/OS, Android, CDN (Content Delivery Network), Pascal, CVS, mySQL, Libvirt / KVM, AzureAD (EntraID), IDSA / Dataspace Protocol, Gaia-X, Artificial Neural Networks, VueJS, Rust, Load Balancing, CRM, couchDB, GCP, Kubernetes, SvelteJS, Terraform, Assembleur x86, AIX, PHP, Vagrant, ReactJS, Datacenter Infrastructure, RabbitMQ, Kafka, Cobol, Solaris, Full Stack Development, Natural, Gemini (Google), Angular, .net/C#, Microsoft Dynamics, Claude AI (Anthropic), Disaster Recovery &amp; Business Continuity, Django, Assembleur ARM, Antigravity</Description>
+      </Computer>
+      <Other>
+        <Description>HTTP, Solana, Ethereum</Description>
+      </Other>
+    </Skills>
+    <AchievementList>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projects</Label>
+        </Title>
+        <Description>Site perso example.org - Author (2023-10 - present)
+Pages statiques générées (SSG), portfolio et publications personnelles (Digital gardening space).
+    CV sémantique modélisé dans un graphe RDF et rendu par une SPA qui addresse un store oxigraph en SPARQL.
+URL: https://example.org/
+Skills: github, git, SvelteJS, Typescript</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projects</Label>
+        </Title>
+        <Description>ExampleVillages - Contributor (2023-10 - 2024-04)
+Contribution au site examplevillages : Intégration d'un IdP OIDC (nodejs) pour mettre en oeuvre une authentification avec OIDC
+URL: https://www.examplevillages.org
+Skills: git, github, NodeJS, postgreSQL, mySQL, Software Quality Assurance, SQL, OIDC, SSO, PHP, Javascript, Algorithmics</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projects</Label>
+        </Title>
+        <Description>KittyHyper - Archiver for GNU Mailman v3 - Contributor (2013-06 - 2014-02)
+Contributions au projet kittyhyper mailman3, l'outil d'archivage des mails dans une liste de discussion mailman3.
+    kittyhyper fait converger l'archivage, mais aussi consultation en ligne des archives des listes. Le web des forums amène aussi à intégrer dans l'application frontend les interactions avec la liste.
+URL: https://docs.mailman3.org/projects/kittyhyper/en/stable/
+Skills: git, postgreSQL, SQL, Django, Javascript, Python</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projects</Label>
+        </Title>
+        <Description>Alpha Editor - Contributor (2010-01 - 2013-12)
+Alpha Editor est un éditeur de HTML qui utilise la balise contenteditable de HTML5.
+    Contribution au produit open-source Alpha Editor pour des features qui permettent l'insertion d'image dans un editeur WYSIWYG en glisser-déplacer depuis l'explorateur de fichiers vers le navigateur web.
+    Environnement de dev Node/VanillaJS / jQuery-UI
+URL: http://alpha-editor.example/
+Skills: git, Javascript, Algorithmics</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projects</Label>
+        </Title>
+        <Description>AcmeCos - Author (2009-01 - 2014-12)
+Conception et réalisation d'un serveur d’applications pour la gestion des données personnelles basé sur un stockage de type document.
+URL: https://github.com/example-cos
+Skills: git, Algorithmics, HTTP, couchDB, Javascript, Python</Description>
+      </Achievement>
+    </AchievementList>
+  </LearnerInfo>
+</SkillsPassport>

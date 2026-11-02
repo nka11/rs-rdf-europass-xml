@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en">
+  <DocumentInfo>
+    <DocumentType>ECV</DocumentType>
+    <CreationDate>2026-11-02T10:00:00Z</CreationDate>
+    <LastUpdateDate>2026-11-02T10:00:00Z</LastUpdateDate>
+    <XSDVersion>V3.4</XSDVersion>
+    <Generator>europass-xml 0.1.0</Generator>
+  </DocumentInfo>
+  <LearnerInfo>
+    <Identification>
+      <PersonName>
+        <FirstName>Ada</FirstName>
+        <Surname>Lovelace</Surname>
+      </PersonName>
+    </Identification>
+  </LearnerInfo>
+</SkillsPassport>

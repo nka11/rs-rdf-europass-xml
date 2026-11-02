@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "lang": "fr",
+  "person": {
+    "givenName": "Hélène",
+    "familyName": "Dupont-Martin",
+    "headline": "Architecte logiciel",
+    "summary": "Profil généraliste.\n- Conception\n- Livraison",
+    "email": "mailto:helene@example.org",
+    "websites": [
+      { "url": "https://example.org/blog", "label": "Blog" },
+      { "url": "https://example.org/cv", "label": "CV" },
+      { "url": "https://www.linkedin.com/in/helene", "label": "LinkedIn" },
+      { "url": "https://example.org/plain" }
+    ],
+    "address": { "line1": "1 rue de la Paix", "line2": "Bâtiment B", "postalCode": "75002", "municipality": "Paris", "countryCode": "fr", "country": "France" },
+    "phones": [ { "number": "+33 1 23 45 67 89", "use": "work" }, { "number": "+33 6 12 34 56 78", "use": "mobile" } ],
+    "birthDate": "1980-02-29",
+    "gender": "F",
+    "nationalities": [ { "code": "FR", "label": "Française" } ]
+  },
+  "languages": [
+    { "label": "Français", "level": "Langue maternelle", "code": "fr", "motherTongue": true },
+    { "label": "Anglais", "level": "Courant", "code": "en", "cef": { "listening": "C1", "reading": "C2", "spokenInteraction": "B2", "spokenProduction": "B2", "writing": "c1" } },
+    { "label": "Allemand", "code": "de", "cef": { "listening": "A2" } }
+  ],
+  "experiences": [
+    {
+      "id": "a", "role": "Architecte", "organization": "Acme & Fils <SA>", "start": "2020-03-15", "end": null, "current": true,
+      "url": "https://acme.example.com/",
+      "description": "Mission principale.\nSuite.",
+      "bullets": ["Pilotage", "Revue d'architecture"],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/2bef94db-0088-4507-982a-2ca717529adb",
+      "skills": ["Rust", { "label": "WebAssembly" }, "rust"],
+      "positions": [
+        { "title": "Lead", "start": "2022-01-01", "bullets": ["Équipe de 5"], "projects": [
+          { "name": "Refonte", "role": "Architecte", "start": "2022-02-01", "end": "2022-12-31", "description": "Migration.", "bullets": ["Étape 1"], "skills": ["Docker"] } ] },
+        { "title": "", "projects": [ { "name": "Audit", "start": "2021-01-01" } ] }
+      ]
+    },
+    { "id": "b", "role": "Ingénieur", "organization": "Beta", "start": "2010-09", "end": "2015-06-30", "current": false },
+    { "id": "c", "positions": [ { "title": "Consultant", "start": "2005", "end": "2006" } ], "start": "2005", "end": "2006" }
+  ],
+  "education": [
+    { "title": "Master", "school": "Université", "city": "Lyon", "levelLabel": "Master 2", "eqf": 7, "start": "2003-09-01", "end": "2005-06-30",
+      "projects": [ { "name": "Mémoire", "description": "Sur les graphes." } ] },
+    { "title": "Licence", "eqf": 6, "end": "2003" }
+  ],
+  "skills": [
+    { "label": "Rust", "category": "TechnicalSkill", "uses": 5 },
+    { "label": "Docker", "category": "ToolSkill" },
+    { "label": "Leadership", "category": "ManagementSkill" },
+    { "label": "TOGAF", "category": "MethodologicalSkill" },
+    { "label": "NIS2", "category": "ComplianceSkill" },
+    { "label": "Cuisine" },
+    { "label": "docker", "category": "ToolSkill" }
+  ],
+  "projects": [
+    { "name": "Outil perso", "role": "Auteur", "start": "2019-01-01", "url": "https://example.org/outil", "description": "Un outil.", "bullets": ["Rapide"], "skills": ["Rust"] }
+  ],
+  "meta": { "generatedAt": "2026-11-02T10:00:00+01:00", "generator": "tests", "variant": "cyber", "sourceUrl": "https://example.org/cv", "omitted": ["x"], "untagged": ["y"] }
+}

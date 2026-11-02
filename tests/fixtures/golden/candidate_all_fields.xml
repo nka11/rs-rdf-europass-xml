@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Candidate xmlns="http://www.europass.eu/1.0" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:eures="http://www.europass_eures.eu/1.0" xmlns:hr="http://www.hr-xml.org/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.europass.eu/1.0 Candidate.xsd">
+  <hr:DocumentID schemeID="europass-xml" schemeName="DocumentIdentifier" schemeAgencyName="EUROPASS" schemeVersionID="4.0"/>
+  <CandidateSupplier>
+    <hr:PartyID schemeID="europass-xml" schemeName="PartyID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
+    <hr:PartyName>Owner</hr:PartyName>
+    <PersonContact>
+      <PersonName>
+        <oa:GivenName>Hélène</oa:GivenName>
+        <hr:FamilyName>Dupont-Martin</hr:FamilyName>
+      </PersonName>
+      <Communication>
+        <ChannelCode>Email</ChannelCode>
+        <oa:URI>helene@example.org</oa:URI>
+      </Communication>
+    </PersonContact>
+    <hr:PrecedenceCode>1</hr:PrecedenceCode>
+  </CandidateSupplier>
+  <CandidatePerson>
+    <PersonName>
+      <oa:GivenName>Hélène</oa:GivenName>
+      <hr:FamilyName>Dupont-Martin</hr:FamilyName>
+    </PersonName>
+    <Communication>
+      <ChannelCode>Email</ChannelCode>
+      <oa:URI>helene@example.org</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Web</ChannelCode>
+      <oa:URI>https://example.org/blog</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Web</ChannelCode>
+      <oa:URI>https://example.org/cv</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Social Media</ChannelCode>
+      <UseCode>linkedin</UseCode>
+      <oa:URI>https://www.linkedin.com/in/helene</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Web</ChannelCode>
+      <oa:URI>https://example.org/plain</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Telephone</ChannelCode>
+      <UseCode>work</UseCode>
+      <CountryDialing>33</CountryDialing>
+      <oa:DialNumber>123456789</oa:DialNumber>
+      <CountryCode>fr</CountryCode>
+    </Communication>
+    <Communication>
+      <ChannelCode>Telephone</ChannelCode>
+      <UseCode>mobile</UseCode>
+      <CountryDialing>33</CountryDialing>
+      <oa:DialNumber>612345678</oa:DialNumber>
+      <CountryCode>fr</CountryCode>
+    </Communication>
+    <Communication>
+      <UseCode>home</UseCode>
+      <Address type="home">
+        <oa:AddressLine>1 rue de la Paix, Bâtiment B</oa:AddressLine>
+        <oa:CityName>Paris</oa:CityName>
+        <CountryCode>fr</CountryCode>
+        <oa:PostalCode>75002</oa:PostalCode>
+      </Address>
+    </Communication>
+    <NationalityCode>fr</NationalityCode>
+    <hr:BirthDate>1980-02-29</hr:BirthDate>
+    <GenderCode>female</GenderCode>
+    <PrimaryLanguageCode name="NORMAL">fra</PrimaryLanguageCode>
+  </CandidatePerson>
+  <CandidateProfile languageCode="fr">
+    <hr:ID schemeID="europass-xml" schemeName="CandidateProfileID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
+    <hr:ExecutiveSummary>&lt;p&gt;&lt;strong&gt;Architecte logiciel&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Profil généraliste.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Conception&lt;/li&gt;&lt;li&gt;Livraison&lt;/li&gt;&lt;/ul&gt;</hr:ExecutiveSummary>
+    <EmploymentHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Acme &amp; Fils &lt;SA&gt;</hr:OrganizationName>
+        <Link>https://acme.example.com/</Link>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Architecte</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2020-03</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Mission principale.&lt;/p&gt;&lt;p&gt;Suite.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Pilotage&lt;/li&gt;&lt;li&gt;Revue d'architecture&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Rust, WebAssembly&lt;/p&gt;&lt;p&gt;Lead (2022-01 - aujourd'hui)&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Équipe de 5&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Refonte (2022-02 - 2022-12)&lt;/p&gt;&lt;p&gt;Migration.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Étape 1&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Docker&lt;/p&gt;&lt;p&gt;Audit (2021-01 - aujourd'hui)&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Beta</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Ingénieur</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2010-09</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2015-06</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Consultant</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2005</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2006</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Consultant (2005 - 2006)&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+    </EmploymentHistory>
+    <EducationHistory>
+      <EducationOrganizationAttendance>
+        <hr:OrganizationName>Université</hr:OrganizationName>
+        <OrganizationContact>
+          <Communication>
+            <Address>
+              <oa:CityName>Lyon</oa:CityName>
+            </Address>
+          </Communication>
+        </OrganizationContact>
+        <AttendancePeriod>
+          <StartDate>
+            <hr:FormattedDateTime>2003-09</hr:FormattedDateTime>
+          </StartDate>
+          <EndDate>
+            <hr:FormattedDateTime>2005-06</hr:FormattedDateTime>
+          </EndDate>
+          <Ongoing>false</Ongoing>
+        </AttendancePeriod>
+        <EducationDegree>
+          <hr:DegreeName>Master</hr:DegreeName>
+          <OccupationalSkillsCovered>&lt;p&gt;Mémoire&lt;/p&gt;&lt;p&gt;Sur les graphes.&lt;/p&gt;</OccupationalSkillsCovered>
+        </EducationDegree>
+        <EducationLevelCode>7</EducationLevelCode>
+      </EducationOrganizationAttendance>
+      <EducationOrganizationAttendance>
+        <AttendancePeriod>
+          <EndDate>
+            <hr:FormattedDateTime>2003</hr:FormattedDateTime>
+          </EndDate>
+          <Ongoing>false</Ongoing>
+        </AttendancePeriod>
+        <EducationDegree>
+          <hr:DegreeName>Licence</hr:DegreeName>
+        </EducationDegree>
+        <EducationLevelCode>6</EducationLevelCode>
+      </EducationOrganizationAttendance>
+    </EducationHistory>
+    <PersonQualifications>
+      <PersonCompetency>
+        <CompetencyID schemeName="NORMAL">eng</CompetencyID>
+        <hr:TaxonomyID>language</hr:TaxonomyID>
+        <eures:CompetencyDimension>
+          <hr:CompetencyDimensionTypeCode>CEF-Understanding-Listening</hr:CompetencyDimensionTypeCode>
+          <eures:Score>
+            <hr:ScoreText>C1</hr:ScoreText>
+          </eures:Score>
+        </eures:CompetencyDimension>
+        <eures:CompetencyDimension>
+          <hr:CompetencyDimensionTypeCode>CEF-Understanding-Reading</hr:CompetencyDimensionTypeCode>
+          <eures:Score>
+            <hr:ScoreText>C2</hr:ScoreText>
+          </eures:Score>
+        </eures:CompetencyDimension>
+        <eures:CompetencyDimension>
+          <hr:CompetencyDimensionTypeCode>CEF-Speaking-Interaction</hr:CompetencyDimensionTypeCode>
+          <eures:Score>
+            <hr:ScoreText>B2</hr:ScoreText>
+          </eures:Score>
+        </eures:CompetencyDimension>
+        <eures:CompetencyDimension>
+          <hr:CompetencyDimensionTypeCode>CEF-Speaking-Production</hr:CompetencyDimensionTypeCode>
+          <eures:Score>
+            <hr:ScoreText>B2</hr:ScoreText>
+          </eures:Score>
+        </eures:CompetencyDimension>
+        <eures:CompetencyDimension>
+          <hr:CompetencyDimensionTypeCode>CEF-Writing-Production</hr:CompetencyDimensionTypeCode>
+          <eures:Score>
+            <hr:ScoreText>C1</hr:ScoreText>
+          </eures:Score>
+        </eures:CompetencyDimension>
+      </PersonCompetency>
+      <PersonCompetency>
+        <CompetencyID schemeName="NORMAL">deu</CompetencyID>
+        <hr:TaxonomyID>language</hr:TaxonomyID>
+        <eures:CompetencyDimension>
+          <hr:CompetencyDimensionTypeCode>CEF-Understanding-Listening</hr:CompetencyDimensionTypeCode>
+          <eures:Score>
+            <hr:ScoreText>A2</hr:ScoreText>
+          </eures:Score>
+        </eures:CompetencyDimension>
+      </PersonCompetency>
+    </PersonQualifications>
+    <Skills>
+      <PersonCompetency>
+        <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+        <hr:CompetencyName>Cuisine</hr:CompetencyName>
+      </PersonCompetency>
+      <SkillsGroup>
+        <Title>Compétences informatiques</Title>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Rust</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Docker</hr:CompetencyName>
+        </PersonCompetency>
+      </SkillsGroup>
+      <SkillsGroup>
+        <Title>Compétences organisationnelles</Title>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Leadership</hr:CompetencyName>
+        </PersonCompetency>
+      </SkillsGroup>
+      <SkillsGroup>
+        <Title>Compétences liées à l'emploi</Title>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>TOGAF</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>NIS2</hr:CompetencyName>
+        </PersonCompetency>
+      </SkillsGroup>
+    </Skills>
+    <Others>
+      <Title>Projets</Title>
+      <Other>
+        <Title>Outil perso</Title>
+        <Description>&lt;p&gt;Un outil.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Rapide&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;URL : https://example.org/outil&lt;/p&gt;&lt;p&gt;Compétences : Rust&lt;/p&gt;</Description>
+      </Other>
+    </Others>
+  </CandidateProfile>
+  <RenderingInformation>
+    <Design>
+      <Template>Template1</Template>
+      <Color>Default</Color>
+      <FontSize>Medium</FontSize>
+      <Logo>FirstPage</Logo>
+      <PageNumbers>false</PageNumbers>
+      <SectionsOrder>
+        <Section>
+          <Title>education-training</Title>
+        </Section>
+        <Section>
+          <Title>work-experience</Title>
+        </Section>
+        <Section>
+          <Title>language</Title>
+        </Section>
+        <Section>
+          <Title>profile-skills</Title>
+        </Section>
+      </SectionsOrder>
+    </Design>
+  </RenderingInformation>
+</Candidate>

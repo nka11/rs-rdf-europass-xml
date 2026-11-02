@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Candidate xmlns="http://www.europass.eu/1.0" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:eures="http://www.europass_eures.eu/1.0" xmlns:hr="http://www.hr-xml.org/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.europass.eu/1.0 Candidate.xsd">
+  <hr:DocumentID schemeID="europass-xml" schemeName="DocumentIdentifier" schemeAgencyName="EUROPASS" schemeVersionID="4.0"/>
+  <CandidateSupplier>
+    <hr:PartyID schemeID="europass-xml" schemeName="PartyID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
+    <hr:PartyName>Owner</hr:PartyName>
+    <PersonContact>
+      <PersonName>
+        <oa:GivenName>Alex</oa:GivenName>
+        <hr:FamilyName>Martin</hr:FamilyName>
+      </PersonName>
+      <Communication>
+        <ChannelCode>Email</ChannelCode>
+        <oa:URI>alex.martin@example.org</oa:URI>
+      </Communication>
+    </PersonContact>
+    <hr:PrecedenceCode>1</hr:PrecedenceCode>
+  </CandidateSupplier>
+  <CandidatePerson>
+    <PersonName>
+      <oa:GivenName>Alex</oa:GivenName>
+      <hr:FamilyName>Martin</hr:FamilyName>
+    </PersonName>
+    <Communication>
+      <ChannelCode>Email</ChannelCode>
+      <oa:URI>alex.martin@example.org</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Web</ChannelCode>
+      <oa:URI>https://github.com/example-alex</oa:URI>
+    </Communication>
+    <Communication>
+      <ChannelCode>Web</ChannelCode>
+      <oa:URI>https://example.org/cv</oa:URI>
+    </Communication>
+    <PrimaryLanguageCode name="NORMAL">fra</PrimaryLanguageCode>
+  </CandidatePerson>
+  <CandidateProfile languageCode="fr">
+    <hr:ID schemeID="europass-xml" schemeName="CandidateProfileID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
+    <hr:ExecutiveSummary>&lt;p&gt;&lt;strong&gt;Ingénieur produit Full-Cycle | Transformer les idées en produits à fort impact&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;J’aide les visionnaires à transformer leurs idées en projets pour créer au final des produits pleinement opérationnels.&lt;/p&gt;&lt;p&gt;Avec plus de 20 ans d’expérience en ingénierie logicielle et infrastructure, je sais apporter de la valeur en :&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Conception &amp;amp; Architecture : Analyse des besoins, UML, conseil métier.&lt;/li&gt;&lt;li&gt;Développement Full-Stack : PHP, Java, Python, C#, JavaScript/TypeScript, React, Vue.&lt;/li&gt;&lt;li&gt;Déploiement &amp;amp; Industrialisation : Packaging, CI/CD et gestion d’environnements IT complexes, y compris architectures conteneurisées et projets stratégiques de migration.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;J'évolue aisément sur les plateformes cloud (GCP, Azure, Scaleway, OVH, AWS), l’Infrastructure-as-Code (Terraform, Ansible) et la sécurité (réseaux, certificats, RBAC, SSO/IAM), j'ai avant tout une expérience significative sur des infrastructures on-premises.&lt;/p&gt;&lt;p&gt;Au dela des compétences techniques, j'ai souvent eu à intervenir en gestion de projets et planification, pour coordonner efficacement les équipes de développement, architecture, sécurité et production. Je suis reconnu pour livrer des solutions dans des environnements contraints (charge, conformité, FinOps) et pour définir des feuilles de route de migration claires.&lt;/p&gt;&lt;p&gt;Mon approche repose sur la rigueur, la collaboration interéquipes et la capacité à documenter et communiquer clairement les choix techniques.&lt;/p&gt;</hr:ExecutiveSummary>
+    <EmploymentHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Dataspace-Y</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Architecte d'Entreprise — Data space mobilité souverain (temps partiel)</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2026-05</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Mission d'Architecte d'Entreprise (temps partiel) au sein d'Dataspace-Y, data space européen souverain fondé par Airline One, Airports Group, Rail Operator, Carmaker et Shipping Line, couvrant 4 secteurs : transport, mobilité, tourisme et logistique.&lt;/p&gt;&lt;p&gt;Définition de la vision et de la feuille de route d'architecture d'entreprise pour un écosystème fédéré multi-acteurs, en s'appuyant sur les cadres TOGAF et ArchiMate, l'architecture de référence Gaia-X / IDSA et le Dataspace Protocol. Conformité by design : NIS2, DORA, RGPD intégrés dès la conception.&lt;/p&gt;&lt;p&gt;Architecture d'Entreprise du data space souverain mobilité (2026-05 - aujourd'hui)&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Définition de la vision et de la feuille de route d'architecture d'entreprise alignant métier, données, applications et infrastructure.&lt;/li&gt;&lt;li&gt;Cartographie des capacités et des principes d'architecture pour un écosystème fédéré multi-acteurs.&lt;/li&gt;&lt;li&gt;Conception des connecteurs de souveraineté (Dataspace Protocol, EDC) et des self-descriptions Gaia-X.&lt;/li&gt;&lt;li&gt;Modèles sémantiques d'interopérabilité inter-secteurs (transport, mobilité, tourisme, logistique).&lt;/li&gt;&lt;li&gt;Conformité by design : NIS2, DORA, RGPD intégrés dès la conception des composants.&lt;/li&gt;&lt;li&gt;Alignement des parties prenantes : comité d'architecture, gouvernance fédérée, sélection technologique et PoCs.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : RGPD, DORA, NIS2, Conformité Règlementaire et Certifiante, IDSA / Dataspace Protocol, Gaia-X, Espaces de Données, ArchiMate, TOGAF, Architecture d'Entreprise&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Telco Corp</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Architecte d'Applications Web</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2025-11</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2026-02</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Audit technique complet du site example.lu - Architecte Senior d'Applications Web (2025-11 - 2026-02)&lt;/p&gt;&lt;p&gt;Audit technique complet de l'application web example.lu pour le compte de Telco Corp.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Revue d'architecture : analyse de l'architecture applicative, des choix technologiques et de la scalabilité.&lt;/li&gt;&lt;li&gt;Audit de sécurité : identification des vulnérabilités, revue des pratiques d'authentification et de gestion des accès.&lt;/li&gt;&lt;li&gt;Audit de performance : analyse des temps de réponse, optimisation du rendu et de la diffusion des contenus.&lt;/li&gt;&lt;li&gt;Recommandations stratégiques et feuille de route d'amélioration.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Assurance Qualité Logicielle, Conformité Règlementaire et Certifiante, OIDC, SSO, Répartition de charge, CDN (Réseau de diffusion de contenu), TCP/IP networking, HTTP, Analyse et Gestion de risques, Gestion Risques et conformité, Architecture Logicielle&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Tractio Labs</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Architecte Infrastructure et Conformité augmenté par l'IA (temps partiel)</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2025-10</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Plateforme souveraine pour assistant de conduite ferroviaire IA-natif (2025-10 - aujourd'hui)&lt;/p&gt;&lt;p&gt;Conception et déploiement d'une infrastructure souveraine pour un assistant de conduite ferroviaire basé sur l'IA, sans dépendance fournisseur, conforme ISO 27001.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Sélection et intégration de composants exclusivement open-source pour garantir l'indépendance technologique.&lt;/li&gt;&lt;li&gt;Mise en place du cadre de gouvernance de la sécurité de l'information (ISO 27001).&lt;/li&gt;&lt;li&gt;Architecture garantissant la portabilité et l'interopérabilité complètes.&lt;/li&gt;&lt;li&gt;Infrastructure adaptée aux workloads d'IA avec traçabilité et auditabilité des traitements.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : ISO/27001, Conformité Règlementaire et Certifiante, Antigravity, Assurance Qualité Logicielle, Gemini (Google), Claude AI (Anthropic), Libvirt / KVM, Docker, Linux, Ansible&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Université de Exemple - Campus Nord - BUT Informatique</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Enseignant Vacataire</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2025-09</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Chargé d'enseignement sur le module 'Virtualisation avancée' (3e année) (2025-09 - 2025-12)&lt;/p&gt;&lt;p&gt;Cours avancé sur les technologie de virtualisations : Securisation du réseau virtuel, clustering, sécurisation de l'exploitation.&lt;/p&gt;&lt;p&gt;Compétences : TCP/IP networking, Virtualisation &amp;amp; Hyperviseurs, Kubernetes, Docker, Linux, Pédagogie&lt;/p&gt;&lt;p&gt;Enseignant sur le module 'Maintenance applicative' (3e année) (2026-01 - 2026-04)&lt;/p&gt;&lt;p&gt;Enseignement de la maintenance applicative : gestion de versions, intégration continue, suivi de bugs, refactoring, tests et gestion du cycle de vie des applications.&lt;/p&gt;&lt;p&gt;Compétences : Programmation, Assurance Qualité Logicielle, CI/CD, git, Pédagogie&lt;/p&gt;&lt;p&gt;Chargé d'enseignement sur le module 'Virtualisation' (2e année) (2026-01 - 2026-04)&lt;/p&gt;&lt;p&gt;Introduction aux technologies de virtualisation : gestion de machines virtuelles avec Libvirt/KVM, provisionnement automatisé avec Vagrant, conteneurisation avec Docker.&lt;/p&gt;&lt;p&gt;Compétences : Virtualisation &amp;amp; Hyperviseurs, Docker, Vagrant, Libvirt / KVM, Linux, Pédagogie&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Interpret Services</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">RSSI à temps partiel</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2025-01</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2025-06</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;RSSI externalisé (2025-01 - 2025-06)&lt;/p&gt;&lt;p&gt;Pilotage RSSI externalisé (2025-01 - 2025-06)&lt;/p&gt;&lt;p&gt;Définition et pilotage opérationnel de la politique de sécurité du SI en tant que RSSI externalisé.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Mise en place d'une gouvernance cyber efficace avec des rituels et indicateurs.&lt;/li&gt;&lt;li&gt;Supervision continue des risques et coordination des audits de sécurité.&lt;/li&gt;&lt;li&gt;Accompagnement à la conformité NIS2 et RGPD.&lt;/li&gt;&lt;li&gt;Contribution directe à la résilience opérationnelle de l'entreprise.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : JIRA, Gestion de projet, EBIOS-RM, RGPD, NIS2, Conformité Règlementaire et Certifiante&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Winstar Games</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Directeur Technique de transition</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2024-06</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2024-12</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;CTO de transition (2024-06 - 2024-12)&lt;/p&gt;&lt;p&gt;Reprise technique et optimisation blockchain (2024-06 - 2024-12)&lt;/p&gt;&lt;p&gt;Reprise et optimisation d'un projet blockchain après le départ du développeur principal.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Rédaction de documentation développeur et procédures d'exploitation.&lt;/li&gt;&lt;li&gt;Mise en œuvre d'une architecture multi-thread pour le traitement blockchain, augmentant la capacité de 400% sans ressources supplémentaires.&lt;/li&gt;&lt;li&gt;Élaboration d'une feuille de route pour atteindre les conformités stratégiques.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : RabbitMQ, Python, CI/CD, Ansible, Ethereum, postgreSQL, Solana, Blockchain, Assurance Qualité Logicielle, Rust, Gestion de projet&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Interpret Services</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Consultant GRC</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2024-06</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2024-12</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Audit de maturité cyber et conformité (2024-06 - 2024-12)&lt;/p&gt;&lt;p&gt;Audit complet de la maturité cyber et de la politique de sécurité du SI pour une PME du secteur de l'interprétariat.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Cartographie des risques selon la méthode EBIOS RM.&lt;/li&gt;&lt;li&gt;Identification des forces et vulnérabilités de la posture cyber.&lt;/li&gt;&lt;li&gt;Recommandations stratégiques pragmatiques adaptées au contexte de l'entreprise.&lt;/li&gt;&lt;li&gt;Feuille de route opérationnelle pour atteindre la conformité NIS2 et RGPD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : EBIOS-RM, RGPD, NIS2, Conformité Règlementaire et Certifiante&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Founder Studio</hr:OrganizationName>
+        <Link>https://github.com/example-studio/</Link>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Fondateur</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2024-06</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Conseil et développement digital de bout en bout (2024-06 - aujourd'hui)&lt;/p&gt;&lt;p&gt;Création et développement de Founder Studio, société de conseil et prestations en développement informatique et digital.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Mise en place d'un fournisseur d'identité (OIDC) garantissant un SSO sécurisé, fiable et maîtrisé.&lt;/li&gt;&lt;li&gt;Développement d'un CRM sur mesure pour fluidifier la prospection et le suivi des leads.&lt;/li&gt;&lt;li&gt;Développement d'un ERP optimisé pour renforcer l'efficacité des processus métier.&lt;/li&gt;&lt;li&gt;Intégration du protocole MCP pour l'assistance IA.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : NodeJS, github, Python, Typescript, postgreSQL, Rust, Assurance Qualité Logicielle, OIDC, Linux, VueJS, IAM, Gestion de projet&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>RoadNotes</hr:OrganizationName>
+        <Link>https://www.roadnotes.example/</Link>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Directeur de la Technologie à temps partiel</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2024-01</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;CTO à temps partiel (2024-01 - aujourd'hui)&lt;/p&gt;&lt;p&gt;Continuité opérationnelle et industrialisation CI/CD (2024-01 - aujourd'hui)&lt;/p&gt;&lt;p&gt;Reprise du pilotage technique après le départ du développeur principal pour assurer la continuité opérationnelle.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Rétro-engineering et documentation complète de l'existant pour rendre les développeurs .NET et mobile autonomes.&lt;/li&gt;&lt;li&gt;Mise en place d'une chaîne CI/CD automatisée (GitHub Actions → Ikoula) réduisant les délais de déploiement et les erreurs.&lt;/li&gt;&lt;li&gt;Conseil en architecture et stratégie pour garantir une trajectoire technique robuste et évolutive.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Angular, github, Typescript, .net/C#, Assurance Qualité Logicielle, CI/CD, mySQL, Gestion de projet&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Novembre Studio</hr:OrganizationName>
+        <Link>https://novembre.example/</Link>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Architecte Solution</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2023-10</hr:FormattedDateTime>
+            </eures:StartDate>
+            <hr:CurrentIndicator>true</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Stratégie digitale et plateforme web (2023-10 - aujourd'hui)&lt;/p&gt;&lt;p&gt;Élaboration et mise en œuvre de la stratégie digitale pour améliorer la visibilité et l'efficacité commerciale d'Novembre Studio.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Conception et déploiement du site internet from scratch avec architecture performante, évolutive et sécurisée.&lt;/li&gt;&lt;li&gt;Intégration fluide du SSO avec le CRM pour une expérience utilisateur unifiée.&lt;/li&gt;&lt;li&gt;Mise en place d'outils de communication et de suivi commercial sur mesure pour accélérer la prospection.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : NodeJS, github, Python, Typescript, postgreSQL, OIDC, VueJS, IAM, Gestion de projet&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Université Exemple Est</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Enseignant Vacataire IUT GE2I Exempleville</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2013-09</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2015-06</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Chargé d'enseignement module Java (2013-09 - 2014-05)&lt;/p&gt;&lt;p&gt;Cours avancé de programmation d'applications Java : Familiarisation au SDK et aux bibliothèques java 8&lt;/p&gt;&lt;p&gt;Compétences : Android, Pédagogie, Java&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Université Exemple Est</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Enseignant Vacataire IUT Informatique Exempleville</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2013-09</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2015-06</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Chargé d'enseignement module Android (2013-09 - 2014-05)&lt;/p&gt;&lt;p&gt;Cours avancé de programmation d'applications Android : SDK et API andoid 3 et 4&lt;/p&gt;&lt;p&gt;Compétences : Android, Pédagogie, Java&lt;/p&gt;&lt;p&gt;Chargé d'enseignement Architecture des Ordinateurs (2014-09 - 2015-06)&lt;/p&gt;&lt;p&gt;Cours de systemes unix, programmation assembleur ARM / Intel&lt;/p&gt;&lt;p&gt;Compétences : Linux, Pédagogie, C, Assembleur ARM, Assembleur x86&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>Holiday Resorts SA</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Architecte Technique Senior</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2001-01</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2023-09</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Lead DevSecOps (2017-06 - 2023-09)&lt;/p&gt;&lt;p&gt;Déménagement serveurs vers nouveau datacenter (2017-04 - 2018-08)&lt;/p&gt;&lt;p&gt;Direction de projet de migration datacenter : transition de ~50 hyperviseurs vers un datacenter plus moderne et sécurisé pour améliorer la résilience des services.&lt;/p&gt;&lt;p&gt;Missions principales :&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Structuration et pilotage du projet multi-chantiers (WAN/LAN, serveurs, hébergement)&lt;/li&gt;&lt;li&gt;Coordination technique : inventaire applications critiques, revue configurations réseau/CDN/load balancers&lt;/li&gt;&lt;li&gt;Gestion des risques et scénarios métiers : répétitions de bascule PRA/mode dégradé&lt;/li&gt;&lt;li&gt;Animation des instances projet, reporting et suivi budgétaire&lt;/li&gt;&lt;li&gt;Pilotage de la sortie du datacenter historique&lt;/li&gt;&lt;li&gt;Supervision de la remise en route production puis migration du PRA&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Linux, Analyse et Gestion de risques, Gestion budgétaire, Plan de Reprise d'Activité &amp;amp; Continuité d'Activité, CDN (Réseau de diffusion de contenu), Répartition de charge, TCP/IP networking, Virtualisation &amp;amp; Hyperviseurs, Infrastructure Datacenter, Gestion de projet&lt;/p&gt;&lt;p&gt;Integration globale de l'authentification fédérée (2017-11 - 2023-09)&lt;/p&gt;&lt;p&gt;Elargissement de l'intégration de l'authentification fédérée (SSO) sur l'outil SIRH (Workday - 40k utilisateurs) avec SAML et IBM ISAM.&lt;/p&gt;&lt;p&gt;Mise en œuvre d’une politique de gestion des identités.&lt;/p&gt;&lt;p&gt;Modernisation de l'application de gestions des identités nodejs : réecriture du front avec ReactJS.&lt;/p&gt;&lt;p&gt;Fédération des applications tierces avec le protocole OIDC de préférence, SAML quand c'est le seul choix propoé par l'éditeur/solution.&lt;/p&gt;&lt;p&gt;Phase 2 : Migration vers la solution Microsoft AzureAD (Entra ID) pour le composant de fédération (2022 -&amp;gt; 2023-09).&lt;/p&gt;&lt;p&gt;Compétences : Assurance Qualité Logicielle, Python, Javascript, ReactJS, NodeJS, postgreSQL, AzureAD (EntraID), LDAP, Linux, Docker, Gitlab, Ansible, SAML, oAuth, OIDC, IBM ISAM, IAM, SSO, Gestion de projet&lt;/p&gt;&lt;p&gt;Creation FeatureTem SecOps (2021-11 - 2022-05)&lt;/p&gt;&lt;p&gt;Proposition et matérialisation de l'équipe de sécurité du SI sous forme de 'Feature Team' sécurité.&lt;/p&gt;&lt;p&gt;Accompagnement du RSSI dans l'organisation de rituels agile.&lt;/p&gt;&lt;p&gt;Compétences : Assurance Qualité Logicielle, Gestion des Versions de Code Source, CI/CD, git, Docker, Linux, Ansible, Conformité Règlementaire et Certifiante, Gestion Risques et conformité, JIRA, Gestion de projet Agile, Gestion de projet&lt;/p&gt;&lt;p&gt;Projet Road99 (2022-10 - 2023-09)&lt;/p&gt;&lt;p&gt;ROAD 99 signifie Réorganisation et Architecture des Données, 45 étant le chiffre fétiche de Holiday Resorts. Dans ce projet ambitieux, Holiday Resorts a repensé toute sa chaîne d’analyse de données avec une architecture orientée événements. Les événements issus de tous les composants opérationnels du SI sont collectés et traités dans GCP pour offrir aux utilisateurs un environnement de travail intuitif pour la donnée (reporting, prévisions, etc.).&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Tech Lead et PO du stream infrastructure (3 devOps)&lt;/li&gt;&lt;li&gt;Conception de la GCP Landing Zone intégrée au SI Holiday Resorts, avec IaC et CI/CD sous GitLab&lt;/li&gt;&lt;li&gt;Définition de la Landing Zone Azure pour simplification de l’architecture bureautique&lt;/li&gt;&lt;li&gt;Création de documentation de gouvernance avec intégration Azure AD pour SSO et IAM&lt;/li&gt;&lt;li&gt;Fourniture de blueprints pour divers types de projets (API REST, batchs planifiés, propagation événementielle, pipelines ML, inférence transactionnelle) avec déploiement automatisé (IaC, CI/CD, documentation).&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Python, Kafka, Linux, Assurance Qualité Logicielle, Gitlab, Structurer l’information, Terraform, Ansible, postgreSQL, Docker, Reseaux de Neurones, Principes de l’Intelligence Artificielle, noSQL, git, SSO, IAM, AzureAD (EntraID), Azure, GCP, Cloud Computing, Architecture Logicielle, Gestion de projet Agile, Gestion de projet&lt;/p&gt;&lt;p&gt;Lead DevOps (2011-06 - 2017-06)&lt;/p&gt;&lt;p&gt;Migration du warehouse de DB2/Z vers DB2 LUW (2012-03 - 2012-12)&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Migration de la base de données DB2 warehouse de z/OS vers Linux.&lt;/li&gt;&lt;li&gt;Adaptation des processus de livraison (Schema et procédures stockées).&lt;/li&gt;&lt;li&gt;Migration des programmes COBOL de z/OS vers linux.&lt;/li&gt;&lt;li&gt;Mise en place d'une chaîne de build et d'une procédure de déploiement pour les programmes COBOL.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Assurance Qualité Logicielle, Gestion des Versions de Code Source, DB2, z/OS, Linux, Jenkins, git, Cobol, Gestion de projet&lt;/p&gt;&lt;p&gt;Migration z/OS vers Linux (2013-03 - 2015-09)&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Migration de la base d'authentification RACF vers un annuaire openLDAP.&lt;/li&gt;&lt;li&gt;Mise en place des environnements et configuration des système pour heberger l'application centrale développée avec SoftwareAG Natural.&lt;/li&gt;&lt;li&gt;Industrialisation processus de deploiement de l'application autour de gitlab avec une CI Jenkins&lt;/li&gt;&lt;li&gt;Creation et maintenant d'une application de gestion des identités pour les métiers support&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Assurance Qualité Logicielle, IAM, Jenkins, Javascript, NodeJS, Natural, z/OS, git, Linux, RACF, LDAP, Gestion de projet&lt;/p&gt;&lt;p&gt;Projet 'Customer Experience Optimization' (2016-06 - 2019-10)&lt;/p&gt;&lt;p&gt;Mise en oeuvre d'une stratégie de propagation entre le CRM Dynamics et le site central DB2.&lt;/p&gt;&lt;p&gt;Intégration de la solution IBM ISAM pour le SSO SAML et OIDC entre les différents composants du projet&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Architecture projet : Cadrage, Choix d'un outil de CRM, Conception d'une experience unifiée avec le Holiday Resorts Resa System.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Java, Microsoft Dynamics, LDAP, Docker, Gitlab, SAML, OIDC, DB2, IBM ISAM, IAM, SSO, Structurer l’information, Architecture Logicielle, Gestion de projet&lt;/p&gt;&lt;p&gt;Architecte Technique Senior (2005-06 - 2011-06)&lt;/p&gt;&lt;p&gt;Industrialisation et controle qualité du developpement procstock DB2/MVS&lt;/p&gt;&lt;p&gt;Conception de l'architecture technique et des procédures de livraisons de procédures stockées DB2 entre les différents environnements dans un DB2 z/OS.&lt;/p&gt;&lt;p&gt;Spécifications technique détaillée.&lt;/p&gt;&lt;p&gt;Packaging, Déploiement et suivi d'exploitation.&lt;/p&gt;&lt;p&gt;Compétences : Assurance Qualité Logicielle, z/OS, Linux, Jenkins, git, SQL, DB2&lt;/p&gt;&lt;p&gt;Architecte Technique (2001-06 - 2005-06)&lt;/p&gt;&lt;p&gt;[Suite omise : limite de longueur]&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+      <EmployerHistory>
+        <hr:OrganizationName>BetaSystems</hr:OrganizationName>
+        <PositionHistory>
+          <PositionTitle typeCode="FREETEXT">Ingénieur d’exploitation</PositionTitle>
+          <eures:EmploymentPeriod>
+            <eures:StartDate>
+              <hr:FormattedDateTime>2000-01</hr:FormattedDateTime>
+            </eures:StartDate>
+            <eures:EndDate>
+              <hr:FormattedDateTime>2001-01</hr:FormattedDateTime>
+            </eures:EndDate>
+            <hr:CurrentIndicator>false</hr:CurrentIndicator>
+          </eures:EmploymentPeriod>
+          <oa:Description>&lt;p&gt;Monitoring, pupitrage et déploiement d’applications web critiques.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Contribution à la stabilité et à la disponibilité des services.&lt;/li&gt;&lt;li&gt;Premières expériences sur Linux et Solaris, posant les bases de la rigueur en production.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Compétences : Solaris, Linux, Java&lt;/p&gt;</oa:Description>
+        </PositionHistory>
+      </EmployerHistory>
+    </EmploymentHistory>
+    <EducationHistory>
+      <EducationOrganizationAttendance>
+        <hr:OrganizationName>IUT Exemple Est</hr:OrganizationName>
+        <OrganizationContact>
+          <Communication>
+            <Address>
+              <oa:CityName>Exempleville</oa:CityName>
+            </Address>
+          </Communication>
+        </OrganizationContact>
+        <AttendancePeriod>
+          <StartDate>
+            <hr:FormattedDateTime>1996-09</hr:FormattedDateTime>
+          </StartDate>
+          <EndDate>
+            <hr:FormattedDateTime>1998-06</hr:FormattedDateTime>
+          </EndDate>
+          <Ongoing>false</Ongoing>
+        </AttendancePeriod>
+        <EducationDegree>
+          <hr:DegreeName>DUT Informatique</hr:DegreeName>
+          <OccupationalSkillsCovered>&lt;p&gt;Stage de fin d'études au laboratoire a university laboratory&lt;/p&gt;&lt;p&gt;Au sein du Laboratoire de Recherche de Exemple Est, spécialisé dans la recherche en réseaux de neurones.&lt;/p&gt;&lt;p&gt;Implementation d'un mini jeu de plateau&lt;/p&gt;&lt;p&gt;Conception d'un moteur d'assertions pour valider le déplacement des pièces.&lt;/p&gt;&lt;p&gt;Conception d'un algorithme de type arbre de décision pour que l'humain puisse jouer contre la machine&lt;/p&gt;&lt;p&gt;Compétences : Architecture Logicielle, C, Reseaux de Neurones, Principes de l’Intelligence Artificielle&lt;/p&gt;</OccupationalSkillsCovered>
+        </EducationDegree>
+        <EducationLevelCode>5</EducationLevelCode>
+      </EducationOrganizationAttendance>
+      <EducationOrganizationAttendance>
+        <hr:OrganizationName>Lycée Jean Exemple</hr:OrganizationName>
+        <OrganizationContact>
+          <Communication>
+            <Address>
+              <oa:CityName>Exempleville</oa:CityName>
+            </Address>
+          </Communication>
+        </OrganizationContact>
+        <AttendancePeriod>
+          <EndDate>
+            <hr:FormattedDateTime>1996-06</hr:FormattedDateTime>
+          </EndDate>
+          <Ongoing>false</Ongoing>
+        </AttendancePeriod>
+        <EducationDegree>
+          <hr:DegreeName>Bac S option Technologie</hr:DegreeName>
+        </EducationDegree>
+        <EducationLevelCode>4</EducationLevelCode>
+      </EducationOrganizationAttendance>
+    </EducationHistory>
+    <PersonQualifications>
+      <PersonCompetency>
+        <CompetencyID schemeName="NORMAL">eng</CompetencyID>
+        <hr:TaxonomyID>language</hr:TaxonomyID>
+      </PersonCompetency>
+    </PersonQualifications>
+    <Skills>
+      <PersonCompetency>
+        <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+        <hr:CompetencyName>HTTP</hr:CompetencyName>
+      </PersonCompetency>
+      <PersonCompetency>
+        <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+        <hr:CompetencyName>Solana</hr:CompetencyName>
+      </PersonCompetency>
+      <PersonCompetency>
+        <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+        <hr:CompetencyName>Ethereum</hr:CompetencyName>
+      </PersonCompetency>
+      <SkillsGroup>
+        <Title>Compétences informatiques</Title>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Programmation</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>DevOps</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Javascript</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Procedural</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Linux</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Object Oriented</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gestion des Versions de Code Source</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>SGBDR</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>git</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>TCP/IP networking</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Structurer l’information</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Cloud Computing</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Python</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Docker</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Virtualisation &amp; Hyperviseurs</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Principes de l’Intelligence Artificielle</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>postgreSQL</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>DB2</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Java</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Azure</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>SQL</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Espaces de Données</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>NodeJS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>github</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Blockchain</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Ansible</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Typescript</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>EventBUS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Algorithmique</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>C</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>noSQL</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>z/OS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>CDN (Réseau de diffusion de contenu)</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Libvirt / KVM</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Android</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>CVS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Pascal</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>IDSA / Dataspace Protocol</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>mySQL</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Répartition de charge</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>AzureAD (EntraID)</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gaia-X</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>VueJS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Reseaux de Neurones</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>CRM</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Rust</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Kafka</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Plan de Reprise d'Activité &amp; Continuité d'Activité</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>GCP</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>PHP</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gemini (Google)</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Terraform</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Assembleur x86</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>ReactJS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Vagrant</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>RabbitMQ</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Full Stack Development</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Cobol</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Infrastructure Datacenter</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>SvelteJS</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Kubernetes</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>.net/C#</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Solaris</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>couchDB</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Natural</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Angular</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>AIX</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Microsoft Dynamics</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Assembleur ARM</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Django</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Antigravity</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Claude AI (Anthropic)</hr:CompetencyName>
+        </PersonCompetency>
+      </SkillsGroup>
+      <SkillsGroup>
+        <Title>Compétences organisationnelles</Title>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gestion de projet</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gestion de projet Agile</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>JIRA</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gestion budgétaire</hr:CompetencyName>
+        </PersonCompetency>
+      </SkillsGroup>
+      <SkillsGroup>
+        <Title>Compétences liées à l'emploi</Title>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Assurance Qualité Logicielle</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gestion Risques et conformité</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>CI/CD</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Architecture Logicielle</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Conformité Règlementaire et Certifiante</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>OIDC</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Pédagogie</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>IAM</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Architecture d'Entreprise</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>SAML</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>SSO</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Analyse et Gestion de risques</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Jenkins</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>NIS2</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>RGPD</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>Gitlab</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>LDAP</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>ArchiMate</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>DORA</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>EBIOS-RM</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>UML</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>TOGAF</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>IBM ISAM</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>oAuth</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>RACF</hr:CompetencyName>
+        </PersonCompetency>
+        <PersonCompetency>
+          <hr:TaxonomyID>Digital_Skill</hr:TaxonomyID>
+          <hr:CompetencyName>ISO/27001</hr:CompetencyName>
+        </PersonCompetency>
+      </SkillsGroup>
+    </Skills>
+    <Others>
+      <Title>Projets</Title>
+      <Other>
+        <Title>Site perso example.org</Title>
+        <Description>&lt;p&gt;Pages statiques générées (SSG), portfolio et publications personnelles (Digital gardening space).&lt;/p&gt;&lt;p&gt;CV sémantique modélisé dans un graphe RDF et rendu par une SPA qui addresse un store oxigraph en SPARQL.&lt;/p&gt;&lt;p&gt;URL : https://example.org/&lt;/p&gt;&lt;p&gt;Compétences : github, git, SvelteJS, Typescript&lt;/p&gt;</Description>
+      </Other>
+    </Others>
+    <Others>
+      <Title>Projets</Title>
+      <Other>
+        <Title>ExampleVillages</Title>
+        <Description>&lt;p&gt;Contribution au site examplevillages : Intégration d'un IdP OIDC (nodejs) pour mettre en oeuvre une authentification avec OIDC&lt;/p&gt;&lt;p&gt;URL : https://www.examplevillages.org&lt;/p&gt;&lt;p&gt;Compétences : git, github, NodeJS, postgreSQL, mySQL, Assurance Qualité Logicielle, SQL, OIDC, SSO, PHP, Javascript, Algorithmique&lt;/p&gt;</Description>
+      </Other>
+    </Others>
+    <Others>
+      <Title>Projets</Title>
+      <Other>
+        <Title>KittyHyper - Archiver for GNU Mailman v3</Title>
+        <Description>&lt;p&gt;Contributions au projet kittyhyper mailman3, l'outil d'archivage des mails dans une liste de discussion mailman3.&lt;/p&gt;&lt;p&gt;kittyhyper fait converger l'archivage, mais aussi consultation en ligne des archives des listes. Le web des forums amène aussi à intégrer dans l'application frontend les interactions avec la liste.&lt;/p&gt;&lt;p&gt;URL : https://docs.mailman3.org/projects/kittyhyper/en/stable/&lt;/p&gt;&lt;p&gt;Compétences : git, postgreSQL, SQL, Django, Javascript, Python&lt;/p&gt;</Description>
+      </Other>
+    </Others>
+    <Others>
+      <Title>Projets</Title>
+      <Other>
+        <Title>Alpha Editor</Title>
+        <Description>&lt;p&gt;Alpha Editor est un éditeur de HTML qui utilise la balise contenteditable de HTML5.&lt;/p&gt;&lt;p&gt;Contribution au produit open-source Alpha Editor pour des features qui permettent l'insertion d'image dans un editeur WYSIWYG en glisser-déplacer depuis l'explorateur de fichiers vers le navigateur web.&lt;/p&gt;&lt;p&gt;Environnement de dev Node/VanillaJS / jQuery-UI&lt;/p&gt;&lt;p&gt;URL : http://alpha-editor.example/&lt;/p&gt;&lt;p&gt;Compétences : git, Javascript, Algorithmique&lt;/p&gt;</Description>
+      </Other>
+    </Others>
+    <Others>
+      <Title>Projets</Title>
+      <Other>
+        <Title>AcmeCos</Title>
+        <Description>&lt;p&gt;Conception et réalisation d'un serveur d’applications pour la gestion des données personnelles basé sur un stockage de type document.&lt;/p&gt;&lt;p&gt;URL : https://github.com/example-cos&lt;/p&gt;&lt;p&gt;Compétences : git, Algorithmique, HTTP, couchDB, Javascript, Python&lt;/p&gt;</Description>
+      </Other>
+    </Others>
+  </CandidateProfile>
+  <RenderingInformation>
+    <Design>
+      <Template>Template1</Template>
+      <Color>Default</Color>
+      <FontSize>Medium</FontSize>
+      <Logo>FirstPage</Logo>
+      <PageNumbers>false</PageNumbers>
+      <SectionsOrder>
+        <Section>
+          <Title>education-training</Title>
+        </Section>
+        <Section>
+          <Title>work-experience</Title>
+        </Section>
+        <Section>
+          <Title>language</Title>
+        </Section>
+        <Section>
+          <Title>profile-skills</Title>
+        </Section>
+      </SectionsOrder>
+    </Design>
+  </RenderingInformation>
+</Candidate>

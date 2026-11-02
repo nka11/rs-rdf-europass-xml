@@ -1,0 +1,45 @@
+[package]
+name = "europass-xml"
+version = "0.1.0"
+edition = "2021"
+description = "CV JSON to Europass XML CV (XML Schema v3.4.1), compiled to WebAssembly with wasm-bindgen"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/nka11/rs-rdf-europass-xml"
+publish = false
+rust-version = "1.80"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+indexing_slicing = "deny"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[package.metadata.wasm-pack.profile.release]
+# The system wasm-opt (binaryen v108) is NOT usable: with `-Os --all-features` it shrinks the module to ~264 KB
+# but corrupts the externref table, and initSync() throws "Table.set(): function-typed object must be null".
+# Verified 2026-11-02. Re-enable `["-Os", "--all-features"]` only with a binaryen >= 116 and re-run the smoke test.
+wasm-opt = false
+
+[package.metadata.wasm-pack.profile.dev]
+wasm-opt = false
+
+[[bin]]
+name = "europass-xml-cli"
+path = "src/bin/europass-xml-cli.rs"

@@ -1,0 +1,1721 @@
+{
+  "schemaVersion": 1,
+  "lang": "en",
+  "person": {
+    "name": "Alex Martin",
+    "headline": "Full-Cycle Product Engineer | Turning Ideas into Impactful Products",
+    "summary": "I help visionaries transform their ideas into projects to ultimately create fully functional products.\n\nWith 20+ years of experience in software and infrastructure engineering, I specialize in:\n- Design & Architecture: Requirements analysis, UML, business consulting.\n- Full-Stack Development: PHP, Java, Python, C#, JavaScript/TypeScript, React, Vue.\n- Deployment & Industrialization: Packaging, CI/CD, and managing complex IT environments, including containerized architectures and strategic migration projects.\n\nI am highly proficient with cloud platforms (GCP, Azure, Scaleway, OVH, AWS), Infrastructure-as-Code (Terraform, Ansible), and security (networks, certificates, RBAC, SSO/IAM), with hands-on experience across both on-premises and cloud infrastructures.\n\nI also bring extensive project management experience, coordinating development, architecture, security, and production teams. I excel at delivering solutions in constrained environments (load, compliance, FinOps) and defining clear migration roadmaps.\n\nMy approach is defined by rigor, cross-team collaboration, and the ability to clearly document and communicate technical choices.",
+    "email": "alex.martin@example.org",
+    "websites": [
+      {
+        "url": "https://github.com/example-alex",
+        "label": "GitHub"
+      },
+      {
+        "url": "https://example.org/cv",
+        "label": "CV"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "label": "English",
+      "level": "Bilingual",
+      "code": "en",
+      "motherTongue": false
+    },
+    {
+      "label": "French",
+      "level": "Native",
+      "code": "fr",
+      "motherTongue": true
+    }
+  ],
+  "experiences": [
+    {
+      "id": "dataspace",
+      "role": "Enterprise Architect — Sovereign mobility data space (part-time)",
+      "organization": "Dataspace-Y",
+      "start": "2026-05-01",
+      "end": null,
+      "current": true,
+      "description": "Enterprise Architect (part-time) mission within Dataspace-Y, the European sovereign data space founded by Airline One, Airports Group, Rail Operator, Carmaker and Shipping Line, covering 4 verticals: transport, mobility, tourism and logistics.\nDefinition of the enterprise architecture vision and roadmap for a federated multi-actor ecosystem, leveraging TOGAF and ArchiMate frameworks, the Gaia-X / IDSA reference architecture and the Dataspace Protocol. Compliance by design: NIS2, DORA and GDPR embedded from inception.",
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/2bef94db-0088-4507-982a-2ca717529adb",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Enterprise Architect",
+          "start": "2026-05-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Enterprise Architecture for the sovereign mobility data space",
+              "description": "Enterprise Architect (part-time) mission within Dataspace-Y, the European sovereign data space founded by Airline One, Airports Group, Rail Operator, Carmaker and Shipping Line, covering transport, mobility, tourism and logistics.",
+              "bullets": [
+                "Definition of the enterprise architecture vision and roadmap aligning business, data, application and infrastructure layers.",
+                "Capability mapping and architecture principles for a federated multi-actor ecosystem.",
+                "Design of sovereignty connectors (Dataspace Protocol, EDC) and Gaia-X self-descriptions.",
+                "Cross-sector semantic interoperability models (transport, mobility, tourism, logistics).",
+                "Compliance by design: NIS2, DORA, GDPR embedded into component design.",
+                "Stakeholder alignment: architecture board, federated governance, technology selection and PoCs."
+              ],
+              "start": "2026-05-01",
+              "skills": [
+                "RGPD",
+                "DORA",
+                "NIS2",
+                "Regulatory and Certification Compliance",
+                "IDSA / Dataspace Protocol",
+                "Gaia-X",
+                "Data Spaces",
+                "ArchiMate",
+                "TOGAF",
+                "Enterprise Architecture"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telco",
+      "role": "Web Application Architect",
+      "organization": "Telco Corp",
+      "start": "2025-11-01",
+      "end": "2026-02-28",
+      "current": false,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/d0aa0792-4345-474b-9365-686cf4869d2e",
+      "skills": [],
+      "positions": [
+        {
+          "title": "",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Full technical audit of example.lu website",
+              "role": "Senior Web Application Architect",
+              "description": "Comprehensive technical audit of the example.lu web application on behalf of Telco Corp.",
+              "bullets": [
+                "Architecture review: analysis of application architecture, technology choices and scalability.",
+                "Security audit: vulnerability identification, review of authentication and access management practices.",
+                "Performance audit: response time analysis, rendering and content delivery optimization.",
+                "Strategic recommendations and improvement roadmap."
+              ],
+              "start": "2025-11-01",
+              "end": "2026-02-28",
+              "skills": [
+                "Software Quality Assurance",
+                "Regulatory and Certification Compliance",
+                "OIDC",
+                "SSO",
+                "Load Balancing",
+                "CDN (Content Delivery Network)",
+                "TCP/IP networking",
+                "HTTP",
+                "Risk Management",
+                "Risk and Compliance Management",
+                "Software Architecture"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tractio",
+      "role": "AI Augmented Infrastructure and Compliance Architect (part-time)",
+      "organization": "Tractio Labs",
+      "start": "2025-10-01",
+      "end": null,
+      "current": true,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/e1c72b5f-4c5c-487c-a6df-e84b64a51dae",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Infrastructure and Compliance Architect",
+          "start": "2025-10-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Sovereign platform for AI-native train driving assistant",
+              "description": "Design and deployment of a sovereign infrastructure for an AI-based train driving assistant, free from vendor lock-in, aligned with ISO 27001.",
+              "bullets": [
+                "Selection and integration of exclusively open-source components to ensure technological independence.",
+                "Implementation of the information security governance framework (ISO 27001).",
+                "Architecture ensuring full portability and interoperability.",
+                "Infrastructure tailored to AI workloads with processing traceability and auditability."
+              ],
+              "start": "2025-10-01",
+              "skills": [
+                "ISO/27001",
+                "Regulatory and Certification Compliance",
+                "Antigravity",
+                "Software Quality Assurance",
+                "Gemini (Google)",
+                "Claude AI (Anthropic)",
+                "Libvirt / KVM",
+                "Docker",
+                "Linux",
+                "Ansible"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uicaenbut",
+      "role": "Part-time Teacher",
+      "organization": "Université de Exemple - Campus Nord - BUT Informatique",
+      "start": "2025-09-01",
+      "end": null,
+      "current": true,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/684fd8d5-9b40-4b02-a680-438f0082d923",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Part-time Teacher",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "TA for advanded virtualization module (3rd year)",
+              "description": "Advanced course on virtualization technologies: virtual network hardening, clustering, securing operations.",
+              "bullets": [],
+              "start": "2025-09-10",
+              "end": "2025-12-10",
+              "skills": [
+                "TCP/IP networking",
+                "Virtualization & Hypervisors",
+                "Kubernetes",
+                "Docker",
+                "Linux",
+                "Pedagogy"
+              ]
+            },
+            {
+              "name": "Teacher for application maintenance module (3rd year)",
+              "description": "Teaching application maintenance: version control, continuous integration, bug tracking, refactoring, testing and application lifecycle management.",
+              "bullets": [],
+              "start": "2026-01-01",
+              "end": "2026-04-30",
+              "skills": [
+                "Programming",
+                "Software Quality Assurance",
+                "CI/CD",
+                "git",
+                "Pedagogy"
+              ]
+            },
+            {
+              "name": "TA for virtualization module (2nd year)",
+              "description": "Introduction to virtualization technologies: virtual machine management with Libvirt/KVM, automated provisioning with Vagrant, containerization with Docker.",
+              "bullets": [],
+              "start": "2026-01-01",
+              "end": "2026-04-30",
+              "skills": [
+                "Virtualization & Hypervisors",
+                "Docker",
+                "Vagrant",
+                "Libvirt / KVM",
+                "Linux",
+                "Pedagogy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interpret-rssi",
+      "role": "Part-time CISO",
+      "organization": "Interpret Services",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "current": false,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/276ba420-ef09-4a0e-b215-2c2e2f80ad28",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Outsourced CISO",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Outsourced CISO Management",
+              "description": "Definition and operational management of the IS security policy as outsourced CISO.",
+              "bullets": [
+                "Establishment of effective cyber governance with rituals and indicators.",
+                "Continuous risk monitoring and security audit coordination.",
+                "Support for NIS2 and GDPR compliance.",
+                "Direct contribution to the company's operational resilience."
+              ],
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "skills": [
+                "JIRA",
+                "Project management",
+                "EBIOS-RM",
+                "RGPD",
+                "NIS2",
+                "Regulatory and Certification Compliance"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winstar-cto",
+      "role": "Transition CTO",
+      "organization": "Winstar Games",
+      "start": "2024-06-01",
+      "end": "2024-12-20",
+      "current": false,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/7b1b5da8-573a-49bb-a38e-68725a949f4f",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Interim CTO",
+          "start": "2024-06-01",
+          "end": "2024-12-20",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Technical Recovery and Blockchain Optimization",
+              "description": "Recovery and optimization of a blockchain project after the departure of the main developer.",
+              "bullets": [
+                "Developed developer documentation and operational procedures.",
+                "Implemented multi-threaded architecture for blockchain processing, increasing throughput by 400% without additional resources.",
+                "Developed roadmap to achieve strategic compliance."
+              ],
+              "start": "2024-06-01",
+              "end": "2024-12-20",
+              "skills": [
+                "RabbitMQ",
+                "Python",
+                "CI/CD",
+                "Ansible",
+                "Ethereum",
+                "postgreSQL",
+                "Solana",
+                "Blockchain",
+                "Software Quality Assurance",
+                "Rust",
+                "Project management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interpret-grc",
+      "role": "GRC Consultant",
+      "organization": "Interpret Services",
+      "start": "2024-06-01",
+      "end": "2024-12-20",
+      "current": false,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/0ce5a9f4-e00a-4bbe-b255-3c63407167a4",
+      "skills": [],
+      "positions": [
+        {
+          "title": "GRC Consultant",
+          "start": "2024-06-01",
+          "end": "2024-12-20",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Cybersecurity Maturity Audit and Compliance",
+              "description": "Comprehensive cybersecurity maturity and IS security policy audit for an SME in the interpreting sector.",
+              "bullets": [
+                "Risk mapping using the EBIOS RM methodology.",
+                "Identification of strengths and vulnerabilities in the cyber posture.",
+                "Pragmatic strategic recommendations tailored to the company's context.",
+                "Actionable roadmap to achieve NIS2 and GDPR compliance."
+              ],
+              "start": "2024-06-01",
+              "end": "2024-12-20",
+              "skills": [
+                "EBIOS-RM",
+                "RGPD",
+                "NIS2",
+                "Regulatory and Certification Compliance"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "studio",
+      "role": "Founder",
+      "organization": "Founder Studio",
+      "start": "2024-06-01",
+      "end": null,
+      "current": true,
+      "url": "https://github.com/example-studio/",
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/6c3fd65e-2d24-47d8-bc22-9e93512bdcc2",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Founder",
+          "start": "2024-06-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "End-to-end IT Consultancy and Digital Development",
+              "description": "Creation and development of Founder Studio, an IT consultancy and digital development services company.",
+              "bullets": [
+                "Implemented an identity provider (OIDC) ensuring secure, reliable, and controlled SSO.",
+                "Developed a custom CRM to streamline lead management and prospecting.",
+                "Developed a tailored ERP to optimize business processes and accelerate decision-making.",
+                "MCP protocol integration for AI assistance."
+              ],
+              "start": "2024-06-01",
+              "skills": [
+                "NodeJS",
+                "github",
+                "Python",
+                "Typescript",
+                "postgreSQL",
+                "Rust",
+                "Software Quality Assurance",
+                "OIDC",
+                "Linux",
+                "VueJS",
+                "IAM",
+                "Project management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "izrbcto",
+      "role": "Part-time CTO",
+      "organization": "RoadNotes",
+      "start": "2024-01-01",
+      "end": null,
+      "current": true,
+      "url": "https://www.roadnotes.example/",
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/7b1b5da8-573a-49bb-a38e-68725a949f4f",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Part-time CTO",
+          "start": "2024-01-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Operational Continuity and CI/CD Industrialization",
+              "description": "Technical leadership takeover after the departure of the main developer to ensure operational continuity.",
+              "bullets": [
+                "Retro-engineering and comprehensive documentation to make .NET and mobile developers autonomous.",
+                "Implemented automated CI/CD pipeline (GitHub Actions → Ikoula), reducing deployment time and errors.",
+                "Architecture and strategy guidance to ensure a robust and scalable technical roadmap."
+              ],
+              "start": "2024-01-01",
+              "url": "https://www.roadnotes.example/",
+              "skills": [
+                "Angular",
+                "github",
+                "Typescript",
+                ".net/C#",
+                "Software Quality Assurance",
+                "CI/CD",
+                "mySQL",
+                "Project management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "novembre",
+      "role": "Solution Architect",
+      "organization": "Novembre Studio",
+      "start": "2023-10-01",
+      "end": null,
+      "current": true,
+      "url": "https://novembre.example/",
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/e1c72b5f-4c5c-487c-a6df-e84b64a51dae",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Solution Architect",
+          "start": "2023-10-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Digital Strategy and Web Platform",
+              "description": "Development and implementation of the digital strategy to enhance visibility and business efficiency for Novembre Studio.",
+              "bullets": [
+                "Designed and deployed the website from scratch with a scalable, high-performance, and secure architecture.",
+                "Integrated SSO with CRM for a seamless user experience.",
+                "Implemented tailored communication and lead tracking tools to accelerate sales prospecting."
+              ],
+              "start": "2023-10-01",
+              "url": "https://novembre.example/",
+              "skills": [
+                "NodeJS",
+                "github",
+                "Python",
+                "Typescript",
+                "postgreSQL",
+                "OIDC",
+                "VueJS",
+                "IAM",
+                "Project management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iutparisxii",
+      "role": "Teacher Assistant IUT GE2I Exempleville",
+      "organization": "Université Exemple Est",
+      "start": "2013-09-01",
+      "end": "2015-06-01",
+      "current": false,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/684fd8d5-9b40-4b02-a680-438f0082d923",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Teacher Assistant IUT GE2I Exempleville",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Java programming",
+              "description": "Advanced Java application programming course: introduction to the SDK and the Java 8 libraries",
+              "bullets": [],
+              "start": "2013-09-01",
+              "end": "2014-05-30",
+              "skills": [
+                "Android",
+                "Pedagogy",
+                "Java"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iutparisxii-2",
+      "role": "Teacher Assistant IUT Informatique Exempleville",
+      "organization": "Université Exemple Est",
+      "start": "2013-09-01",
+      "end": "2015-06-01",
+      "current": false,
+      "bullets": [],
+      "skills": [],
+      "positions": [
+        {
+          "title": "Teacher Assistant IUT Informatique Exempleville",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Android applications programming",
+              "description": "Advanced Android application programming course: SDK and Android API 3 and 4",
+              "bullets": [],
+              "start": "2013-09-01",
+              "end": "2014-05-30",
+              "skills": [
+                "Android",
+                "Pedagogy",
+                "Java"
+              ]
+            },
+            {
+              "name": "Teacher assistant for Systems Architecture",
+              "description": "TA for Unix system, assembly programming ARM / Intel",
+              "bullets": [],
+              "start": "2014-09-01",
+              "end": "2015-06-30",
+              "skills": [
+                "Linux",
+                "Pedagogy",
+                "C",
+                "Assembleur ARM",
+                "Assembleur x86"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hr-ate",
+      "role": "Senior Technical Architect",
+      "organization": "Holiday Resorts SA",
+      "start": "2001-01-01",
+      "end": "2023-09-30",
+      "current": false,
+      "bullets": [],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/e1c72b5f-4c5c-487c-a6df-e84b64a51dae",
+      "skills": [],
+      "positions": [
+        {
+          "title": "Lead DevSecOps",
+          "start": "2017-06-02",
+          "end": "2023-09-30",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Server Migration to New Datacenter",
+              "description": "Datacenter migration project management: transition of ~50 hypervisors to a more modern and secure datacenter to improve service resilience.\n\n    Key responsibilities:",
+              "bullets": [
+                "Project structuring and management of multi-workstream initiative (WAN/LAN, servers, hosting)",
+                "Technical coordination: critical application inventory, network/CDN/load balancer configuration review",
+                "Risk management and business scenarios: disaster recovery failover/degraded mode rehearsals",
+                "Project governance, reporting and budget tracking",
+                "Legacy datacenter exit management",
+                "Production restart supervision followed by disaster recovery site migration"
+              ],
+              "start": "2017-04-01",
+              "end": "2018-08-20",
+              "skills": [
+                "Linux",
+                "Risk Management",
+                "Budget Management",
+                "Disaster Recovery & Business Continuity",
+                "CDN (Content Delivery Network)",
+                "Load Balancing",
+                "TCP/IP networking",
+                "Virtualization & Hypervisors",
+                "Datacenter Infrastructure",
+                "Project management"
+              ]
+            },
+            {
+              "name": "Federated authentication integration",
+              "description": "Migrating SAML and OIDC delegations from ISAM to AzureAD (2022-now)\n            Integration of the IBM  solution ISAM for SSO and implementation of an identity management policy.(2017-2021)\n            Administration and management of the authentication stack with openLDAP.\n            Priority to OIDC as the federation protocol when available.\n            End user support tooling app modernization with nodejs : Rewrite with React.\n            Integration of the different solutions to delegate authentication to the central solution (LDAP or with SAML or OIDC federation)\n            Setup and exploitation of accounts synchronization solutions (Microsoft MIM/FIM, IBM ISDI)",
+              "bullets": [],
+              "start": "2017-11-02",
+              "end": "2023-09-30",
+              "skills": [
+                "Software Quality Assurance",
+                "Python",
+                "Javascript",
+                "ReactJS",
+                "NodeJS",
+                "postgreSQL",
+                "AzureAD (EntraID)",
+                "LDAP",
+                "Linux",
+                "Docker",
+                "Gitlab",
+                "Ansible",
+                "SAML",
+                "oAuth",
+                "OIDC",
+                "IBM ISAM",
+                "IAM",
+                "SSO",
+                "Project management"
+              ]
+            },
+            {
+              "name": "Tech Lead secOps Feature Team",
+              "description": "At the initiative of the creation of the SecOps FeatureTeam of Holiday Resorts, led by the CISO.\n            Team design, mission & governance definition, advocacy for convincing direction comitee to adopt an agile organization which will address security compliance   and infrastructure design.\n            Support the PO (the CISO) in a SCRUM approach to coordinate the work of the Holiday Resorts infrastructure teams. (Role of agile coach/scrum mentor)\n            Implementation in JIRA Cloud (Automations, Workflows, gitlab integration)\n            integration of security equipment and tools cooperating with the CISO",
+              "bullets": [],
+              "start": "2021-11-02",
+              "end": "2022-05-30",
+              "skills": [
+                "Software Quality Assurance",
+                "Source Control Management",
+                "CI/CD",
+                "git",
+                "Docker",
+                "Linux",
+                "Ansible",
+                "Regulatory and Certification Compliance",
+                "Risk and Compliance Management",
+                "JIRA",
+                "Agile project management",
+                "Project management"
+              ]
+            },
+            {
+              "name": "Project Road99",
+              "description": "ROAD 99 stands for Reloaded Organization and Architecture of Data, 99 is the lucky number of the Holiday Resorts company. In this ambitious project, Holiday Resorts redesigned its entire Data analysis stack with an event-driven data propagation Architecture. The events emitted from all the operational components of the IT ecosystem will then be collected and processed on the GCP cloud platform to offer DATA users an intuitive and self-explainatory environment to work with their DATA (Reporting, previsions, etc…).",
+              "bullets": [
+                "Tech Lead and PO of the infrastructure stream (3 devOps)",
+                "Design The GCP landing zone integrated with Holiday Resorts’s legacy infrastructure, using IaC and CI/CD with gitlab",
+                "Azure Landing Zone definition for Holiday Resorts's office architecture simplification",
+                "Create governance documentation and link with Azure AD for the SSO and IAM (Users)",
+                "Provide blueprints for various types of projects (REST API, Scheduled batches, Event-driven data propagation, Machine Learning Pipelines, Transactional Inference) to perform automated configuration and deployment (Project templates including IaC and CI/CD toolbox with an accurate documentation)."
+              ],
+              "start": "2022-10-02",
+              "end": "2023-09-30",
+              "skills": [
+                "Python",
+                "Kafka",
+                "Linux",
+                "Software Quality Assurance",
+                "Gitlab",
+                "Structuring information",
+                "Terraform",
+                "Ansible",
+                "postgreSQL",
+                "Docker",
+                "Artificial Neural Networks",
+                "AI Fundamentals",
+                "noSQL",
+                "git",
+                "SSO",
+                "IAM",
+                "AzureAD (EntraID)",
+                "Azure",
+                "GCP",
+                "Cloud Computing",
+                "Software Architecture",
+                "Agile project management",
+                "Project management"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Lead DevOps",
+          "start": "2011-06-02",
+          "end": "2017-06-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Migration du warehouse de DB2/Z vers DB2 LUW",
+              "bullets": [
+                "Migration de la base de données DB2 warehouse de z/OS vers Linux.",
+                "Adaptation des processus de livraison (Schema et procédures stockées).",
+                "Migration des programmes COBOL de z/OS vers linux.",
+                "Mise en place d'une chaîne de build et d'une procédure de déploiement pour les programmes COBOL."
+              ],
+              "start": "2012-03-10",
+              "end": "2012-12-10",
+              "skills": [
+                "Software Quality Assurance",
+                "Source Control Management",
+                "DB2",
+                "z/OS",
+                "Linux",
+                "Jenkins",
+                "git",
+                "Cobol",
+                "Project management"
+              ]
+            },
+            {
+              "name": "Migration from zOS to Linux",
+              "description": "In charge of setting up communications with other systems, and tuning the application runtime. Fully handled RACF security migration to an OpenLDAP system and created processes and tools for administrators support team.\n        Technical support while migration on DB2 system from z/OS to Linux, in charge of migrating COBOL to openCOBOL, managing change for developpers, providing new tooling and supply chain (with gitlab/rmp & jenkins).\n        Created a transaction monitoring system with nodejs, based on logs output.\n        Crafted an identity management application with nodejs for the end user support teams.",
+              "bullets": [],
+              "start": "2013-03-10",
+              "end": "2015-09-10",
+              "skills": [
+                "Software Quality Assurance",
+                "IAM",
+                "Jenkins",
+                "Javascript",
+                "NodeJS",
+                "Natural",
+                "z/OS",
+                "git",
+                "Linux",
+                "RACF",
+                "LDAP",
+                "Project management"
+              ]
+            },
+            {
+              "name": "Projet 'Customer Experience Optimization'",
+              "description": "Mise en oeuvre d'une stratégie de propagation entre le CRM Dynamics et le site central DB2.\n    Intégration de la solution IBM ISAM pour le SSO SAML et OIDC entre les différents composants du projet",
+              "bullets": [
+                "Architecture projet : Cadrage, Choix d'un outil de CRM, Conception d'une experience unifiée avec le Holiday Resorts Resa System."
+              ],
+              "start": "2016-06-02",
+              "end": "2019-10-31",
+              "skills": [
+                "Java",
+                "Microsoft Dynamics",
+                "LDAP",
+                "Docker",
+                "Gitlab",
+                "SAML",
+                "OIDC",
+                "DB2",
+                "IBM ISAM",
+                "IAM",
+                "SSO",
+                "Structuring information",
+                "Software Architecture",
+                "Project management"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Senior Technical Architect",
+          "start": "2005-06-02",
+          "end": "2011-06-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Industrialisation et controle qualité du developpement procstock DB2/MVS",
+              "description": "Conception de l'architecture technique et des procédures de livraisons de procédures stockées DB2 entre les différents environnements dans un DB2 z/OS.\n        Spécifications technique détaillée.\n        Packaging, Déploiement et suivi d'exploitation.",
+              "bullets": [],
+              "skills": [
+                "Software Quality Assurance",
+                "z/OS",
+                "Linux",
+                "Jenkins",
+                "git",
+                "SQL",
+                "DB2"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Technical Architect",
+          "start": "2001-06-01",
+          "end": "2005-06-01",
+          "bullets": [],
+          "projects": [
+            {
+              "name": "Integration PeopleSoft on prem",
+              "description": "Migration SIRH legacy sur z/OS vers la plate forme PeopleSoft/aix.\n        Défi technique compte tenu de l'environnement assez exotique pour l'éditeur et l'intégrateur.",
+              "bullets": [],
+              "skills": [
+                "DB2",
+                "AIX",
+                "SQL"
+              ]
+            },
+            {
+              "name": "Controle qualité, packaging et deploiement J2EE",
+              "description": "Rôle pivot entre les équipes de dev et d'exploitation.",
+              "bullets": [
+                "Preparation des livraisons",
+                "Assistance au debugging"
+              ],
+              "skills": [
+                "DevOps",
+                "Software Quality Assurance",
+                "DB2",
+                "Linux",
+                "SQL",
+                "CVS"
+              ]
+            },
+            {
+              "name": "Application 'Horizon' Centre d'Appels",
+              "description": "Conception de l'architecture technique et logicielle d'un couplage téléphonie/informatique.\n        Spécifications technique détaillée.\n        Packaging, Déploiement et suivi d'exploitation.",
+              "bullets": [],
+              "skills": [
+                "Structuring information",
+                "Software Quality Assurance",
+                "DevOps",
+                "Jenkins",
+                "Full Stack Development",
+                "Java",
+                "CVS",
+                "SQL",
+                "DB2",
+                "UML",
+                "Software Architecture",
+                "Project management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acsp-inge-exp",
+      "role": "Operations Engineer",
+      "organization": "BetaSystems",
+      "start": "2000-01-01",
+      "end": "2001-01-01",
+      "current": false,
+      "description": "Monitoring, deployment, and operation of critical web applications.",
+      "bullets": [
+        "Ensured stability and service availability.",
+        "Early experience on Linux and Solaris environments, building strong operational discipline."
+      ],
+      "escoOccupation": "http://data.europa.eu/esco/occupation/9e2e6e1e-363b-4e1b-a673-7bc0f7343300",
+      "skills": [
+        "Solaris",
+        "Linux",
+        "Java"
+      ],
+      "positions": []
+    }
+  ],
+  "education": [
+    {
+      "title": "DUT Informatique",
+      "school": "IUT Exemple Est",
+      "city": "Exempleville",
+      "levelLabel": "Diplôme Universitaire de Technologie",
+      "eqf": 5,
+      "start": "1996-09-01",
+      "end": "1998-06-30",
+      "projects": [
+        {
+          "name": "Stage de fin d'études au laboratoire a university laboratory",
+          "description": "Au sein du Laboratoire de Recherche de Exemple Est, spécialisé dans la recherche en réseaux de neurones.\n    Implementation d'un mini jeu de plateau\n    Conception d'un moteur d'assertions pour valider le déplacement des pièces.\n    Conception d'un algorithme de type arbre de décision pour que l'humain puisse jouer contre la machine",
+          "bullets": [],
+          "start": "2022-10-02",
+          "end": "2023-09-30",
+          "skills": [
+            "Software Architecture",
+            "C",
+            "Artificial Neural Networks",
+            "AI Fundamentals"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bac S option Technologie",
+      "school": "Lycée Jean Exemple",
+      "city": "Exempleville",
+      "levelLabel": "Baccalauréat Scientifique",
+      "eqf": 4,
+      "end": "1996-06-30"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Programming",
+      "category": "TechnicalSkill",
+      "uses": 62,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Risk and Compliance Management",
+      "category": "ComplianceSkill",
+      "uses": 35,
+      "esco": "http://data.europa.eu/esco/skill/6eff134b-e34f-4d6e-a6e8-5e47cf2228d0",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Software Quality Assurance",
+      "category": "MethodologicalSkill",
+      "uses": 35,
+      "esco": "http://data.europa.eu/esco/skill/c7cc6dc5-d56b-4323-8e5c-47c4022f615f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "CI/CD",
+      "category": "MethodologicalSkill",
+      "uses": 30,
+      "esco": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "DevOps",
+      "category": "TechnicalSkill",
+      "uses": 27,
+      "esco": "http://data.europa.eu/esco/skill/9c7e6502-4572-4bd3-bd15-771019a92858",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Javascript",
+      "category": "TechnicalSkill",
+      "uses": 26,
+      "esco": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Software Architecture",
+      "category": "MethodologicalSkill",
+      "uses": 25,
+      "esco": "http://data.europa.eu/esco/skill/7193cb6d-8334-494f-86e5-21e6d03a47c3",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Procedural",
+      "category": "TechnicalSkill",
+      "uses": 23,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Linux",
+      "category": "TechnicalSkill",
+      "uses": 20
+    },
+    {
+      "label": "Object Oriented",
+      "category": "TechnicalSkill",
+      "uses": 19,
+      "esco": "http://data.europa.eu/esco/skill/5b9cde20-f1b9-4adc-bfb3-dbf70b14138d",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Regulatory and Certification Compliance",
+      "category": "ComplianceSkill",
+      "uses": 19,
+      "esco": "http://data.europa.eu/esco/skill/06358891-8424-43c5-891e-d40f226bef40",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Source Control Management",
+      "category": "ToolSkill",
+      "uses": 18,
+      "esco": "http://data.europa.eu/esco/skill/9d2e926f-53d9-41f5-98f3-19dfaa687f3f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "SGBDR",
+      "category": "TechnicalSkill",
+      "uses": 18,
+      "esco": "http://data.europa.eu/esco/skill/7369f779-4b71-4aab-8836-48b69c676eec",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Project management",
+      "category": "ManagementSkill",
+      "uses": 18,
+      "esco": "http://data.europa.eu/esco/skill/7111b95d-0ce3-441a-9d92-4c75d05c4388",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "git",
+      "category": "ToolSkill",
+      "uses": 17,
+      "esco": "http://data.europa.eu/esco/skill/9d2e926f-53d9-41f5-98f3-19dfaa687f3f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Structuring information",
+      "category": "TechnicalSkill",
+      "uses": 16,
+      "esco": "http://data.europa.eu/esco/skill/cc9b4fbb-65f1-4c92-9229-1392d03b6e20",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "TCP/IP networking",
+      "category": "TechnicalSkill",
+      "uses": 16,
+      "esco": "http://data.europa.eu/esco/skill/6e4f75b4-c60f-4623-a9ba-760c8245753b",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Cloud Computing",
+      "category": "TechnicalSkill",
+      "uses": 12,
+      "esco": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Docker",
+      "category": "TechnicalSkill",
+      "uses": 9,
+      "esco": "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Python",
+      "category": "TechnicalSkill",
+      "uses": 9,
+      "esco": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "OIDC",
+      "category": "ComplianceSkill",
+      "uses": 9,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Pedagogy",
+      "category": "MethodologicalSkill",
+      "uses": 8,
+      "esco": "http://data.europa.eu/esco/skill/a117f32c-662b-4dd9-b739-1230dd04cb60",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "AI Fundamentals",
+      "category": "TechnicalSkill",
+      "uses": 8,
+      "esco": "http://data.europa.eu/esco/skill/5608d5a0-6d5e-43b7-be37-616501729bb4",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Virtualization & Hypervisors",
+      "category": "TechnicalSkill",
+      "uses": 8,
+      "esco": "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "postgreSQL",
+      "category": "TechnicalSkill",
+      "uses": 7,
+      "esco": "http://data.europa.eu/esco/skill/a8d07b5a-c1a1-42c6-9d53-db9c7a2ca996",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Azure",
+      "category": "TechnicalSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Enterprise Architecture",
+      "category": "MethodologicalSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/ee3c1d54-f46a-43c7-a0f9-0ba3648164d0",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "DB2",
+      "category": "TechnicalSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/3cee858e-79e8-4a4b-b99f-93c7f735d58b",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "IAM",
+      "category": "ComplianceSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Data Spaces",
+      "category": "TechnicalSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/cb5cccc9-abe4-4b11-abe6-d27e5cd85fb1",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Java",
+      "category": "TechnicalSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/19a8293b-8e95-4de3-983f-77484079c389",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "SQL",
+      "category": "TechnicalSkill",
+      "uses": 6,
+      "esco": "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "SAML",
+      "category": "ComplianceSkill",
+      "uses": 5,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "NodeJS",
+      "category": "TechnicalSkill",
+      "uses": 5,
+      "esco": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "github",
+      "category": "ToolSkill",
+      "uses": 5,
+      "esco": "http://data.europa.eu/esco/skill/9d2e926f-53d9-41f5-98f3-19dfaa687f3f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Risk Management",
+      "category": "ComplianceSkill",
+      "uses": 5,
+      "esco": "http://data.europa.eu/esco/skill/6eff134b-e34f-4d6e-a6e8-5e47cf2228d0",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Ansible",
+      "category": "ToolSkill",
+      "uses": 5,
+      "esco": "http://data.europa.eu/esco/skill/6f8a40d6-f9ce-43ec-a72f-d4213a53f3ed",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Blockchain",
+      "category": "ToolSkill",
+      "uses": 5
+    },
+    {
+      "label": "SSO",
+      "category": "ComplianceSkill",
+      "uses": 5,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "EventBUS",
+      "category": "ToolSkill",
+      "uses": 4
+    },
+    {
+      "label": "RGPD",
+      "category": "ComplianceSkill",
+      "uses": 4,
+      "esco": "http://data.europa.eu/esco/skill/a4346013-a967-4a58-a533-6b32ad1364c5",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Jenkins",
+      "category": "MethodologicalSkill",
+      "uses": 4,
+      "esco": "http://data.europa.eu/esco/skill/f47a1998-0beb-43be-9f46-380aa4d183da",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Typescript",
+      "category": "TechnicalSkill",
+      "uses": 4,
+      "esco": "http://data.europa.eu/esco/skill/867137fb-ff1b-4ca3-99f3-cb6969aa2c68",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "NIS2",
+      "category": "ComplianceSkill",
+      "uses": 4,
+      "esco": "http://data.europa.eu/esco/skill/06358891-8424-43c5-891e-d40f226bef40",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Algorithmics",
+      "category": "TechnicalSkill",
+      "uses": 4,
+      "esco": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "C",
+      "category": "TechnicalSkill",
+      "uses": 3,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "LDAP",
+      "category": "ComplianceSkill",
+      "uses": 3,
+      "esco": "http://data.europa.eu/esco/skill/a57a54b6-2f2e-43e4-9621-b52f4a63cb08",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "noSQL",
+      "category": "TechnicalSkill",
+      "uses": 3,
+      "esco": "http://data.europa.eu/esco/skill/76ef6ed3-1658-4a1a-9593-204d799c6d0c",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Gitlab",
+      "category": "MethodologicalSkill",
+      "uses": 3,
+      "esco": "http://data.europa.eu/esco/skill/9d2e926f-53d9-41f5-98f3-19dfaa687f3f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "z/OS",
+      "category": "TechnicalSkill",
+      "uses": 3
+    },
+    {
+      "label": "Android",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/d8829a1d-dbde-435b-b921-29d6462f35c9",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "CDN (Content Delivery Network)",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/d0c6d77e-cb25-4770-bf77-2073fc5f7523",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Pascal",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/e8b89eb6-51e8-4c3a-babb-88b2e110376b",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "CVS",
+      "category": "ToolSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/9d2e926f-53d9-41f5-98f3-19dfaa687f3f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "UML",
+      "category": "MethodologicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/7193cb6d-8334-494f-86e5-21e6d03a47c3",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "mySQL",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/4da171e5-779c-4983-a76f-91c16751e99f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Agile project management",
+      "category": "ManagementSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/e5b94c9d-12ef-4cc6-81ad-6602c207a3e1",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "DORA",
+      "category": "ComplianceSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/06358891-8424-43c5-891e-d40f226bef40",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Libvirt / KVM",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "AzureAD (EntraID)",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/d1e954cd-d290-4d80-97c0-7969960d2928",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "IDSA / Dataspace Protocol",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/cb5cccc9-abe4-4b11-abe6-d27e5cd85fb1",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Gaia-X",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/cb5cccc9-abe4-4b11-abe6-d27e5cd85fb1",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "EBIOS-RM",
+      "category": "ComplianceSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/1dd23dba-dd00-45ab-abf4-642902538317",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "TOGAF",
+      "category": "MethodologicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/c453cf81-6197-428e-84c6-70c773b63f27",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "JIRA",
+      "category": "ManagementSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/7111b95d-0ce3-441a-9d92-4c75d05c4388",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Artificial Neural Networks",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/5608d5a0-6d5e-43b7-be37-616501729bb4",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "VueJS",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/9b9de2a4-d8af-4a7b-933a-a8334ae60067",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Rust",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "ArchiMate",
+      "category": "MethodologicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/c453cf81-6197-428e-84c6-70c773b63f27",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Load Balancing",
+      "category": "TechnicalSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/d0c6d77e-cb25-4770-bf77-2073fc5f7523",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "IBM ISAM",
+      "category": "ComplianceSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "HTTP",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/6e4f75b4-c60f-4623-a9ba-760c8245753b",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "CRM",
+      "category": "ToolSkill",
+      "uses": 2,
+      "esco": "http://data.europa.eu/esco/skill/dc9a236c-c640-43c3-812f-269403591edb",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "couchDB",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/76ef6ed3-1658-4a1a-9593-204d799c6d0c",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "ISO/27001",
+      "category": "ComplianceSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/3ff589b7-68df-4ea5-ae41-b395bdb2378f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "GCP",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "oAuth",
+      "category": "ComplianceSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Kubernetes",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "SvelteJS",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/9b9de2a4-d8af-4a7b-933a-a8334ae60067",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Terraform",
+      "category": "ToolSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/d0c6d77e-cb25-4770-bf77-2073fc5f7523",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Assembleur x86",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "AIX",
+      "category": "TechnicalSkill",
+      "uses": 1
+    },
+    {
+      "label": "Budget Management",
+      "category": "ManagementSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/21c5790c-0930-4d74-b3b0-84caf5af12ea",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "PHP",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/4350c38d-0fe9-4ca7-bab9-40ed7f72b04f",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Solana",
+      "uses": 1
+    },
+    {
+      "label": "Vagrant",
+      "category": "ToolSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/6b3afb82-c4ea-4f14-be54-a757fb762663",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "ReactJS",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/9b9de2a4-d8af-4a7b-933a-a8334ae60067",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Datacenter Infrastructure",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/d0c6d77e-cb25-4770-bf77-2073fc5f7523",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "RabbitMQ",
+      "category": "ToolSkill",
+      "uses": 1
+    },
+    {
+      "label": "Kafka",
+      "category": "ToolSkill",
+      "uses": 1
+    },
+    {
+      "label": "Cobol",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/def007fa-5fed-4a5f-91a2-b0d7e3db1be1",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Solaris",
+      "category": "TechnicalSkill",
+      "uses": 1
+    },
+    {
+      "label": "Full Stack Development",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Natural",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Gemini (Google)",
+      "category": "ToolSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Angular",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/9b9de2a4-d8af-4a7b-933a-a8334ae60067",
+      "escoMatch": "broad"
+    },
+    {
+      "label": ".net/C#",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/4c016b68-4116-468c-9dc6-42710c239e4a",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Ethereum",
+      "uses": 1
+    },
+    {
+      "label": "Microsoft Dynamics",
+      "category": "TechnicalSkill",
+      "uses": 1
+    },
+    {
+      "label": "Claude AI (Anthropic)",
+      "category": "ToolSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Disaster Recovery & Business Continuity",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/64852ade-6ae1-4760-ba4a-976bf07ca255",
+      "escoMatch": "exact"
+    },
+    {
+      "label": "Django",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "RACF",
+      "category": "ComplianceSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Assembleur ARM",
+      "category": "TechnicalSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97",
+      "escoMatch": "broad"
+    },
+    {
+      "label": "Antigravity",
+      "category": "ToolSkill",
+      "uses": 1,
+      "esco": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2",
+      "escoMatch": "broad"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Site perso example.org",
+      "role": "Author",
+      "description": "Pages statiques générées (SSG), portfolio et publications personnelles (Digital gardening space).\n    CV sémantique modélisé dans un graphe RDF et rendu par une SPA qui addresse un store oxigraph en SPARQL.",
+      "bullets": [],
+      "start": "2023-10-01",
+      "url": "https://example.org/",
+      "skills": [
+        "github",
+        "git",
+        "SvelteJS",
+        "Typescript"
+      ]
+    },
+    {
+      "name": "ExampleVillages",
+      "role": "Contributor",
+      "description": "Contribution au site examplevillages : Intégration d'un IdP OIDC (nodejs) pour mettre en oeuvre une authentification avec OIDC",
+      "bullets": [],
+      "start": "2023-10-01",
+      "end": "2024-04-01",
+      "url": "https://www.examplevillages.org",
+      "skills": [
+        "git",
+        "github",
+        "NodeJS",
+        "postgreSQL",
+        "mySQL",
+        "Software Quality Assurance",
+        "SQL",
+        "OIDC",
+        "SSO",
+        "PHP",
+        "Javascript",
+        "Algorithmics"
+      ]
+    },
+    {
+      "name": "KittyHyper - Archiver for GNU Mailman v3",
+      "role": "Contributor",
+      "description": "Contributions au projet kittyhyper mailman3, l'outil d'archivage des mails dans une liste de discussion mailman3.\n    kittyhyper fait converger l'archivage, mais aussi consultation en ligne des archives des listes. Le web des forums amène aussi à intégrer dans l'application frontend les interactions avec la liste.",
+      "bullets": [],
+      "start": "2013-06-01",
+      "end": "2014-02-01",
+      "url": "https://docs.mailman3.org/projects/kittyhyper/en/stable/",
+      "skills": [
+        "git",
+        "postgreSQL",
+        "SQL",
+        "Django",
+        "Javascript",
+        "Python"
+      ]
+    },
+    {
+      "name": "Alpha Editor",
+      "role": "Contributor",
+      "description": "Alpha Editor est un éditeur de HTML qui utilise la balise contenteditable de HTML5.\n    Contribution au produit open-source Alpha Editor pour des features qui permettent l'insertion d'image dans un editeur WYSIWYG en glisser-déplacer depuis l'explorateur de fichiers vers le navigateur web.\n    Environnement de dev Node/VanillaJS / jQuery-UI",
+      "bullets": [],
+      "start": "2010-01-01",
+      "end": "2013-12-01",
+      "url": "http://alpha-editor.example/",
+      "skills": [
+        "git",
+        "Javascript",
+        "Algorithmics"
+      ]
+    },
+    {
+      "name": "AcmeCos",
+      "role": "Author",
+      "description": "Conception et réalisation d'un serveur d’applications pour la gestion des données personnelles basé sur un stockage de type document.",
+      "bullets": [],
+      "start": "2009-01-01",
+      "end": "2014-12-01",
+      "url": "https://github.com/example-cos",
+      "skills": [
+        "git",
+        "Algorithmics",
+        "HTTP",
+        "couchDB",
+        "Javascript",
+        "Python"
+      ]
+    }
+  ],
+  "meta": {
+    "generatedAt": "2026-11-02T10:00:00Z",
+    "generator": "example.org",
+    "variant": null,
+    "sourceUrl": "https://example.org/cv",
+    "omitted": [
+      "product-cycle statements (design, build, delivery, observability, run): 38 statement(s) not exported",
+      "project impacts: 45 statement(s) not exported",
+      "education competencies (skills required by a degree): 10 statement(s) not exported",
+      "organization descriptions and role descriptions only present in CV variants are not exported"
+    ],
+    "untagged": [
+      "organization names",
+      "education.*",
+      "skill categories",
+      "project names and descriptions",
+      "achievement descriptions"
+    ]
+  }
+}

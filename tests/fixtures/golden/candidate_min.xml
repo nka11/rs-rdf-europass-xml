@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Candidate xmlns="http://www.europass.eu/1.0" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:eures="http://www.europass_eures.eu/1.0" xmlns:hr="http://www.hr-xml.org/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.europass.eu/1.0 Candidate.xsd">
+  <hr:DocumentID schemeID="europass-xml" schemeName="DocumentIdentifier" schemeAgencyName="EUROPASS" schemeVersionID="4.0"/>
+  <CandidateSupplier>
+    <hr:PartyID schemeID="europass-xml" schemeName="PartyID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
+    <hr:PartyName>Owner</hr:PartyName>
+    <PersonContact>
+      <PersonName>
+        <oa:GivenName>Ada</oa:GivenName>
+        <hr:FamilyName>Lovelace</hr:FamilyName>
+      </PersonName>
+    </PersonContact>
+    <hr:PrecedenceCode>1</hr:PrecedenceCode>
+  </CandidateSupplier>
+  <CandidatePerson>
+    <PersonName>
+      <oa:GivenName>Ada</oa:GivenName>
+      <hr:FamilyName>Lovelace</hr:FamilyName>
+    </PersonName>
+  </CandidatePerson>
+  <CandidateProfile languageCode="en">
+    <hr:ID schemeID="europass-xml" schemeName="CandidateProfileID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
+  </CandidateProfile>
+  <RenderingInformation>
+    <Design>
+      <Template>Template1</Template>
+      <Color>Default</Color>
+      <FontSize>Medium</FontSize>
+      <Logo>FirstPage</Logo>
+      <PageNumbers>false</PageNumbers>
+    </Design>
+  </RenderingInformation>
+</Candidate>

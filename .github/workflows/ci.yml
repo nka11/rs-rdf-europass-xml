@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Cancel superseded runs of the same ref.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  fmt:
+    name: rustfmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      # src/codesets.rs is generated and excluded with #[rustfmt::skip]
+      - run: cargo fmt --check
+
+  clippy:
+    name: clippy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: clippy (native, all targets)
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: clippy (wasm32 library)
+        run: cargo clippy --locked --target wasm32-unknown-unknown --lib -- -D warnings
+
+  test:
+    name: tests (XSD validation)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils
+      - name: Fetch the Europass XSDs (not stored in the repo)
+        run: scripts/fetch-schema.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Fetch the unofficial Candidate XSD (CC-BY-4.0, not stored in the repo)
+        run: scripts/fetch-candidate-schema.sh
+      - name: cargo test
+        run: cargo test --locked
+        env:
+          REQUIRE_XMLLINT: "1"
+
+  wasm:
+    name: wasm build and size gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: Cache wasm-pack
+        id: wasm-pack-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/wasm-pack
+          key: wasm-pack-0.15.0
+      - name: Install wasm-pack
+        if: steps.wasm-pack-cache.outputs.cache-hit != 'true'
+        run: cargo install wasm-pack --version 0.15.0 --locked
+      - run: wasm-pack build --release --target web
+        # RUSTFLAGS -D warnings must not apply to wasm-bindgen's generated code
+        env:
+          RUSTFLAGS: ""
+      - run: scripts/check-size.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: europass-xml-wasm
+          path: pkg/
+          if-no-files-found: error
+          retention-days: 14

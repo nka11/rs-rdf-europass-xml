@@ -1,0 +1,7 @@
+target/
+pkg/
+# fetched by scripts/fetch-schema.sh (upstream states no licence, so not redistributed)
+schema/v3.4.1/
+schema/candidate/
+schema/imported/EQF_08_V1.0.xsd
+schema/imported/EUDrivinglicence.xsd
