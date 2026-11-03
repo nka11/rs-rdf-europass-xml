@@ -423,19 +423,33 @@ fn person_communications(p: &Person, rep: &mut Report) -> Vec<Node> {
 fn person_name(p: &Person, rep: &mut Report) -> Option<(Option<String>, Option<String>)> {
     let given = rep.opt_line("person.givenName", &p.given_name, LIM_LINE);
     let family = rep.opt_line("person.familyName", &p.family_name, LIM_LINE);
-    if given.is_some() || family.is_some() {
-        return Some((given, family));
+    let (given, family) = if given.is_some() || family.is_some() {
+        (given, family)
+    } else {
+        rep.opt_line("person.name", &p.name, LIM_LINE)
+            .map(|n| split_name(&n))?
+    };
+    // the schema requires a FamilyName: a lone name is used as one
+    match (given, family) {
+        (Some(g), None) => {
+            rep.warn(
+                "name_single",
+                "person",
+                "only one name given: used as the family name, given name left empty".into(),
+            );
+            Some((None, Some(g)))
+        }
+        other => Some(other),
     }
-    rep.opt_line("person.name", &p.name, LIM_LINE)
-        .map(|n| split_name(&n))
 }
 
 fn name_node(name: &(Option<String>, Option<String>)) -> Option<Node> {
     group(
         "PersonName",
         vec![
-            name.0.clone().map(|g| t("oa:GivenName", g)),
-            name.1.clone().map(|f| t("hr:FamilyName", f)),
+            // both elements are required by the schema; a missing part is written empty
+            Some(t("oa:GivenName", name.0.clone().unwrap_or_default())),
+            Some(t("hr:FamilyName", name.1.clone().unwrap_or_default())),
         ],
     )
 }
@@ -466,10 +480,18 @@ fn employment(input: &CvInput, rep: &mut Report) -> Option<Node> {
         let parts = exp_parts(rep, &path, e);
         let mut role = rep.opt_line(&format!("{path}.role"), &e.role, LIM_LINE);
         if role.is_none() {
-            role = e.positions.first().and_then(|x| x.title.clone());
+            // sanitised like the role (the warning for this value is already reported by exp_parts)
+            role = e
+                .positions
+                .first()
+                .and_then(|x| x.title.as_deref())
+                .map(crate::text::sanitize_line)
+                .map(|s| s.text)
+                .filter(|s| !s.is_empty());
         }
         let start = rep.date(&format!("{path}.start"), &e.start);
         let end = rep.date(&format!("{path}.end"), &e.end);
+        rep.check_order(&path, start, end);
         let current =
             e.current == Some(true) || (end == DateField::Absent && e.current != Some(false));
         let text = full_text(rep, &parts, e);
@@ -560,6 +582,7 @@ fn education_entry(
     };
     let start = rep.date(&format!("{path}.start"), &e.start);
     let end = rep.date(&format!("{path}.end"), &e.end);
+    rep.check_order(&path, start, end);
     let blocks: Vec<String> = e
         .projects
         .iter()

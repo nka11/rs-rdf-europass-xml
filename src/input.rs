@@ -341,17 +341,35 @@ pub struct Validation {
 }
 
 /// Validate the input only: errors are the hard errors, warnings are what the mapping reports.
-/// Shares `export::analyze` with the exporter so the two can never disagree.
+/// Runs the exporter itself so the two can never disagree.
 pub fn validate_json(json: &str) -> Validation {
-    match crate::export::analyze_json(json, &crate::options::Options::default()) {
-        Ok((_, warnings)) => Validation {
-            ok: true,
-            errors: vec![],
-            warnings,
-        },
-        Err(errs) => Validation {
+    let input = match parse(json) {
+        Ok(i) => i,
+        Err(e) => {
+            return Validation {
+                ok: false,
+                errors: vec![e.to_issue()],
+                warnings: vec![],
+            }
+        }
+    };
+    let errs = hard_errors(&input);
+    if !errs.is_empty() {
+        return Validation {
             ok: false,
             errors: errs.iter().map(|e| e.to_issue()).collect(),
+            warnings: vec![],
+        };
+    }
+    match crate::export::export(&input, &crate::options::Options::default()) {
+        Ok(e) => Validation {
+            ok: true,
+            errors: vec![],
+            warnings: e.warnings,
+        },
+        Err(e) => Validation {
+            ok: false,
+            errors: vec![e.to_issue()],
             warnings: vec![],
         },
     }

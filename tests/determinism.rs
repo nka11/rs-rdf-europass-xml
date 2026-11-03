@@ -56,14 +56,14 @@ fn null_equals_absent() {
     let a = r#"{"schemaVersion":1,"lang":"en","person":{"name":"A B"},"experiences":[{"id":"x","role":"R","start":"2020-01-01"}],"meta":{"generatedAt":"2026-11-02T10:00:00Z"}}"#;
     let b = r#"{"schemaVersion":1,"lang":"en","person":{"name":"A B","email":null,"headline":null},"experiences":[{"id":"x","role":"R","start":"2020-01-01","end":null,"current":null,"description":null,"url":null}],"education":null,"meta":{"generatedAt":"2026-11-02T10:00:00Z","generator":null}}"#;
     assert_eq!(
-        export_json(a, &Options::legacy()).map(|e| e.xml),
-        export_json(b, &Options::legacy()).map(|e| e.xml)
+        export_json(a, &Options::default()).map(|e| e.xml),
+        export_json(b, &Options::default()).map(|e| e.xml)
     );
 }
 
 #[test]
 fn pretty_false_is_one_line_after_declaration() {
-    let o = Options::from_json(Some(r#"{"pretty":false,"format":"legacy"}"#)).unwrap();
+    let o = Options::from_json(Some(r#"{"pretty":false}"#)).unwrap();
     let xml = export_json(&fixture("cv_min.json"), &o).unwrap().xml;
     let body = xml.split_once('\n').unwrap().1;
     assert_eq!(body.matches('\n').count(), 1);

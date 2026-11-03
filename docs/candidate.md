@@ -5,12 +5,11 @@ reads and writes a different document, `Candidate` (namespace `http://www.europa
 OAGIS 9), also embedded as `attachment.xml` in the PDFs it produces.
 
 ```sh
-europass-xml-cli cv.json -o cv.xml                      # Candidate (default)
-europass-xml-cli cv.json --format legacy -o legacy.xml  # or {"format":"legacy"} in the options JSON
+europass-xml-cli cv.json -o cv.xml
 ```
 
-`Options.format` is `candidate` (default) or `legacy`, the old `SkillsPassport` XML kept for compatibility
-(`--format legacy`). The Candidate output is the only one the current Europass editor accepts.
+This is the only format written. The legacy `SkillsPassport` XML was removed; `{"format":"legacy"}` in the options
+is an error. Terms are defined in [terms.md](terms.md).
 
 ## Sources and licence
 

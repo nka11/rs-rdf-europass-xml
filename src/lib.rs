@@ -1,9 +1,7 @@
-//! CV JSON to Europass XML CV (XML Schema v3.4.1). See `docs/DESIGN.md`.
+//! CV JSON to the Europass Candidate XML (the format the europass.europa.eu editor imports).
 //!
 //! The wasm-facing functions are thin string-in, string-out wrappers; all logic is in
 //! [`export::export`], which is testable natively.
-#[rustfmt::skip]
-pub mod codesets;
 pub mod candidate;
 pub mod date;
 pub mod error;
@@ -11,7 +9,6 @@ pub mod export;
 pub mod i18n;
 pub mod input;
 pub mod map;
-pub mod model;
 pub mod options;
 pub mod text;
 pub mod xml;
@@ -67,7 +64,7 @@ pub fn validate_cv_input(input_json: &str) -> String {
 #[wasm_bindgen(js_name = europassXmlInfo)]
 pub fn europass_xml_info() -> String {
     format!(
-        "{{\"crate\":\"{}\",\"xsdVersion\":\"3.4.1\",\"documentXsdVersion\":\"V3.4\",\"schemaVersion\":1}}",
+        "{{\"crate\":\"{}\",\"format\":\"candidate\",\"schemaVersion\":1}}",
         env!("CARGO_PKG_VERSION")
     )
 }

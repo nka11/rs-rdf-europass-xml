@@ -12,7 +12,7 @@ fn base() -> Value {
 }
 
 fn err(v: &Value) -> ExportError {
-    export_json(&v.to_string(), &Options::legacy()).expect_err("must fail")
+    export_json(&v.to_string(), &Options::default()).expect_err("must fail")
 }
 
 #[test]
@@ -37,15 +37,10 @@ fn bad_fixture_reports_codes_and_paths() {
     assert!(has("email_invalid", "person.email"));
     assert!(has("url_invalid", "person.websites[0].url"));
     assert!(has("url_invalid", "person.websites[1].url"));
-    assert!(has("enum_unknown", "person.phones[0].use"));
-    assert!(has("country_code_unknown", "person.address.countryCode"));
+    assert!(has("phone_prefix_unknown", "person.phones[0]"));
     assert!(has("enum_unknown", "person.gender"));
     assert!(has("date_invalid", "person.birthDate"));
-    assert!(has("country_code_unknown", "person.nationalities[0].code"));
-    assert!(has("language_code_unknown", "languages[0].code"));
-    assert!(has("language_code_unknown", "languages[1].code"));
     assert!(has("cef_invalid", "languages[2].cef.listening"));
-    assert!(has("empty_entry", "languages[3]"));
     assert!(has("date_invalid", "experiences[0].start"));
     assert!(has("date_invalid", "experiences[0].end"));
     assert!(has("date_order", "experiences[1]"));
@@ -57,8 +52,8 @@ fn bad_fixture_reports_codes_and_paths() {
         );
     }
     assert!(has("empty_entry", "education[6]"));
-    assert!(has("unknown_category", "skills[0].category"));
     assert!(has("empty_entry", "skills[2]"));
+    assert!(has("duplicate_skill", "skills"));
     assert!(has("url_invalid", "projects[0].url"));
     assert!(has("empty_entry", "projects[1]"));
     // all messages are one line
@@ -116,10 +111,10 @@ fn hard_errors() {
     // lang is case-insensitive
     let mut v = base();
     v["lang"] = json!("EN");
-    assert!(export_json(&v.to_string(), &Options::legacy())
+    assert!(export_json(&v.to_string(), &Options::default())
         .unwrap()
         .xml
-        .contains("locale=\"en\""));
+        .contains("languageCode=\"en\""));
 }
 
 #[test]
@@ -133,12 +128,12 @@ fn json_level_errors() {
         "{\"person\":[]}",
         "{\"experiences\":[{\"skills\":[5]}]}",
     ] {
-        let e = export_json(bad, &Options::legacy()).expect_err(bad);
+        let e = export_json(bad, &Options::default()).expect_err(bad);
         assert_eq!(e.code(), "json_syntax", "{bad}");
     }
     let big = format!("{{\"x\":\"{}\"}}", "a".repeat(4 * 1024 * 1024));
     assert_eq!(
-        export_json(&big, &Options::legacy()).unwrap_err().code(),
+        export_json(&big, &Options::default()).unwrap_err().code(),
         "input_too_large"
     );
 }
@@ -197,7 +192,6 @@ fn options_validation() {
 fn info_uses_the_crate_version() {
     let v: Value = serde_json::from_str(&europass_xml::europass_xml_info()).unwrap();
     assert_eq!(v["crate"], json!(env!("CARGO_PKG_VERSION")));
-    assert_eq!(v["xsdVersion"], json!("3.4.1"));
-    assert_eq!(v["documentXsdVersion"], json!("V3.4"));
+    assert_eq!(v["format"], json!("candidate"));
     assert_eq!(v["schemaVersion"], json!(1));
 }

@@ -70,8 +70,3 @@ impl Node {
         self
     }
 }
-
-/// `Some(<name>text</name>)` when the text is present.
-pub fn opt_text(name: &'static str, text: &Option<String>) -> Option<Node> {
-    text.as_ref().map(|t| Node::text(name, t.clone()))
-}

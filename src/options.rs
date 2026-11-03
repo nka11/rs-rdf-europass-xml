@@ -17,20 +17,9 @@ pub enum SummaryPlacement {
     Drop,
 }
 
-/// Which Europass XML to write.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]
-#[serde(rename_all = "lowercase")]
-pub enum Format {
-    /// Legacy `SkillsPassport` XML (schema v3.4.1). The current Europass editor refuses it as obsolete.
-    Legacy,
-    /// `Candidate` XML, the format the current europass.europa.eu editor imports.
-    Candidate,
-}
-
 #[derive(Debug, Clone, Deserialize)]
 #[serde(rename_all = "camelCase", default)]
 pub struct Options {
-    pub format: Format,
     pub date_precision: DatePrecision,
     pub include_esco: bool,
     pub summary_placement: SummaryPlacement,
@@ -46,7 +35,6 @@ pub struct Options {
 impl Default for Options {
     fn default() -> Self {
         Options {
-            format: Format::Candidate,
             date_precision: DatePrecision::Month,
             include_esco: false,
             summary_placement: SummaryPlacement::Headline,
@@ -62,14 +50,6 @@ impl Default for Options {
 }
 
 impl Options {
-    /// Defaults with the legacy `SkillsPassport` output.
-    pub fn legacy() -> Options {
-        Options {
-            format: Format::Legacy,
-            ..Options::default()
-        }
-    }
-
     /// Parse the options JSON. `None`, "" and "null" give the defaults.
     pub fn from_json(s: Option<&str>) -> Result<Options, ExportError> {
         let s = match s {
@@ -85,6 +65,13 @@ impl Options {
             return Err(ExportError::BadOptions {
                 msg: "options must be a JSON object".into(),
             });
+        }
+        if let Some(f) = v.get("format") {
+            if f.as_str() != Some("candidate") {
+                return Err(ExportError::BadOptions {
+                    msg: format!("format {f}: only \"candidate\" is supported (the legacy SkillsPassport XML was removed)"),
+                });
+            }
         }
         let o: Options = serde_json::from_value(v)
             .map_err(|e| ExportError::BadOptions { msg: e.to_string() })?;
@@ -114,5 +101,7 @@ mod tests {
         assert!(Options::from_json(Some("5")).is_err());
         assert!(Options::from_json(Some("null")).is_ok());
         assert!(Options::from_json(Some("{}")).is_ok());
+        assert!(Options::from_json(Some(r#"{"format":"candidate"}"#)).is_ok());
+        assert!(Options::from_json(Some(r#"{"format":"legacy"}"#)).is_err());
     }
 }

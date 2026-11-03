@@ -1,93 +1,72 @@
 # rs-rdf-europass-xml
 
-Rust crate (`europass-xml`) compiled to WebAssembly (wasm-bindgen, `--target web`) that turns a language-resolved CV in
-JSON, as produced from an RDF/Turtle CV by the [nka11 website](https://nka11.github.io/), into a **Europass XML CV valid
-against the Europass XML Schema v3.4.1** (`SkillsPassport`, `XSDVersion V3.4`).
-Contract and decisions: `docs/DESIGN.md`. Input JSON: `docs/cv-input.md`. XSD facts: `docs/xsd-map.md`.
+Rust crate (`europass-xml`) that turns a CV given as JSON into the **Europass Candidate XML**, the file the
+Europass editor at europass.europa.eu imports. It builds as a native library and CLI, and as WebAssembly
+(wasm-bindgen, `--target web`) so a browser can do the export. The JSON is a CV already resolved to one language,
+as produced from an RDF/Turtle CV (for example by the [nka11 website](https://nka11.github.io/) or the
+`eona-x-europass-cv-db` project).
+
+The older `SkillsPassport` XML (schema v3.4.1) is no longer written: the editor refuses it as an obsolete version.
+
 Licence: GPL-3.0-or-later (see `LICENSE`). The fixtures are fictional.
 
+Documentation:
+- [docs/terms.md](docs/terms.md): definitions of the terms used here (Candidate XML, EQF, ESCO, CEFR, golden file, ...)
+- [docs/cv-input.md](docs/cv-input.md): the input JSON
+- [docs/candidate.md](docs/candidate.md): the output format, mapping table, sources and licence of the schema used for validation
+
 ## Quick start
+
 ```
-scripts/fetch-schema.sh        # download the official XSDs (not shipped, see "Schema" below); needs gh + network
-cargo test --locked            # needs xmllint; REQUIRE_XMLLINT=1 makes a missing xmllint fail
-wasm-pack build --release --target web    # -> pkg/
-scripts/check-size.sh          # wasm size gate
-scripts/validate.sh file.xml   # xmllint against the XSD, offline (exit 0 only if valid)
-UPDATE_GOLDEN=1 cargo test golden         # after an intended output change
-cargo test --test codesets -- --ignored regenerate_code_sets
+scripts/fetch-candidate-schema.sh          # unofficial Candidate XSD, needed by the tests (not stored here)
+REQUIRE_XMLLINT=1 cargo test --locked      # needs xmllint; without REQUIRE_XMLLINT a missing xmllint skips validation
+UPDATE_GOLDEN=1 cargo test --test candidate    # after an intended output change
+wasm-pack build --release --target web     # -> pkg/
+scripts/check-size.sh                      # wasm size gate (400 KB)
+scripts/validate-candidate.sh file.xml     # xmllint against the Candidate XSD (exit 0 only if valid)
 ```
 
 ## Command line
-`cargo build --release --bin europass-xml-cli` then `europass-xml-cli cv.json -o cv.xml [--options '{...}']`.
-Exit 0 ok, 1 export error (`[code] message`), 2 usage/I-O; warnings go to stderr. Used by the CI pipeline of the
-an internal CV database project.
+
+`cargo build --release --bin europass-xml-cli`, then `europass-xml-cli cv.json -o cv.xml [--options '{...}']`.
+Exit 0 ok, 1 export error (`[code] message`), 2 usage or I/O error. Warnings go to stderr.
+
+## WebAssembly API
+
+String in, string out: `exportEuropassXml(json, options?)`, `exportEuropassXmlReport(json, options?)` (returns
+`{"xml", "warnings"}`), `validateCvInput(json)` and `europassXmlInfo()`. Errors are thrown as `[code] message`.
 
 ## QA
+
 CI (`.github/workflows/ci.yml`) runs on every push and pull request: `cargo fmt --check`, `cargo clippy -D warnings`
-(native all-targets and the wasm32 library), `cargo test` with XSD validation (schema fetched, `REQUIRE_XMLLINT=1`), and a
-wasm build with the 400 KB size gate. Run the same locally: `cargo fmt --check && cargo clippy --all-targets -- -D warnings && cargo test`.
-`src/codesets.rs` is generated and excluded from rustfmt.
+(native, all targets, and the wasm32 library), `cargo test` with schema validation (`REQUIRE_XMLLINT=1`), and a wasm
+build with the size gate. The same locally:
+`cargo fmt --check && cargo clippy --all-targets -- -D warnings && cargo test`.
 
 ## Schema
-The Europass XSDs are **not included** in this repository: their upstream repository
-([europass/ewa-cedefop](https://github.com/europass/ewa-cedefop)) states no licence. `scripts/fetch-schema.sh` downloads
-them at a pinned commit. Without them the schema-dependent tests fail with an explicit message.
 
-API (string in, string out): `exportEuropassXml(json, options?)`, `exportEuropassXmlReport(json, options?)`,
-`validateCvInput(json)`, `europassXmlInfo()`. Errors are thrown as `[code] message`.
+There is no official schema for the Candidate XML. `scripts/fetch-candidate-schema.sh` downloads an unofficial one,
+reverse-engineered by J0ker98 (CC-BY-4.0, <https://github.com/J0ker98/europass-cv>), at a pinned commit into
+`schema/candidate/`. It is not stored in this repository. Passing it shows the structure is right; it does not prove
+the editor accepts the file.
 
-## Measured (2026-11-02, rustc 1.96.1, wasm-pack 0.15.0)
+## Known limits
 
-| | |
-|---|---|
-| wasm size | 285,244 bytes raw (279 KiB), about 100 KB gzip (`opt-level = "z"`, lto, `strip = true`) |
-| export time | 1.5 ms average for the real EN CV (60 KB JSON, 13 experiences, 105 skills), node 24, 200 runs after warm-up |
-| tests | 28 unit + 35 integration, all XSD-validated through `scripts/validate.sh` |
+- Acceptance by the live editor can only be tested by uploading a file to it; the tests cannot.
+- The schema requires both `GivenName` and `FamilyName`. A one-word name is written as the family name with an empty
+  given name, and the export reports `name_single`.
+- Headline and summary are merged into the `ExecutiveSummary`. `summaryPlacement: "drop"` leaves the summary out.
+- Websites that are not `http`, `https` or `ftp` URLs are skipped (`url_invalid`). Text is stripped of characters
+  that XML 1.0 forbids (`text_sanitized`).
+- Skills are not capped. An editor limit, if there is one, is not known.
+- Experiences are written newest first, at month precision by default.
+- Skill groups follow the source category: `TechnicalSkill` and `ToolSkill` go to computer skills,
+  `ManagementSkill` to organisational skills, `MethodologicalSkill` and `ComplianceSkill` to job-related skills.
+- Options must be a JSON object (or empty, or `null`). Unknown keys are ignored, except `format`, which only accepts
+  `"candidate"`.
 
-**wasm-opt is disabled on purpose.** The system `wasm-opt` is binaryen v108. With `-Os --all-features` it saves
-about 7% (264 KB) but the module then fails at `initSync()` (`Table.set(): function-typed object must be null`, the
-externref table gets mangled). Do not re-enable it without a newer binaryen and a run of the smoke test
-(vitest `europassXml.test.ts`, or load the wasm in node and compare with `tests/fixtures/golden/`). This overrides the
-`wasm-opt = ["-Os", "--all-features"]` suggestion in `docs/build.md`. wasm-pack prints a harmless warning about
-`strip = true` and the missing `target_features` section.
+## wasm-opt
 
-## Known limits (not bugs)
-
-* The Europass website may no longer import the legacy XML; XSD validity is guaranteed, import into the live editor
-  was not testable (`docs/xsd-map.md` section 5).
-* The ISCED and NACE schemas used for validation are local stand-ins (`schema/imported/README.md`); the crate never
-  emits `Field` or `Sector`, so this does not matter.
-* Headline: `headline` and `summary` are merged into the single `Headline` (type `personal_statement`), Europass
-  renders it under "Personal statement". Alternative: `summaryPlacement: "drop"`.
-* ESCO IRIs have no slot in the 3.4.1 schema; dropped unless `includeEsco` (appended as `ESCO: <iri>` lines; experience occupations only, skill IRIs are never exported).
-* Websites: non-ASCII characters, spaces, `"`, `<` and `>` are percent-encoded (a space or quote in the host is not) and malformed URLs are skipped (`url_invalid`), because
-  libxml2's `xsd:anyURI` check is strict (single `#`, numeric port, no `[`). Found by the fuzz test.
-* The official example `schema/v3.4.1/examples/Europass_CV_ESP_CL_LP_V3.4.0_Example.xml` does NOT validate (Code
-  `12332` is not a UUID, and two `FieldName` values are invalid): the shipped example data is bad. Do not use it as a
-  validator self-test; `Europass_CV_V3.4.0_Example.xml` validates and is the one to use.
-* Work experience is sorted newest first by period start (stable) after long roles are split per credential.
-* `exportEuropassXml` discards warnings; use `exportEuropassXmlReport` to see dropped data (`url_invalid`, ...).
-* `meta.omitted` lists what the TS bridge leaves out (product-cycle statements, impacts, degree competencies);
-  `meta.untagged` lists text without a language tag that follows the data, not the locale (organization names,
-  education, skill categories, project names/descriptions, achievement descriptions).
-* Skill groups follow the source category: `ComplianceSkill` and `MethodologicalSkill` go to `JobRelated`, so
-  protocol/tool skills (LDAP, SAML, RACF) sit there; a semantic choice, not a loss.
-* Options JSON must be an object (or empty / `null`); `[]` and scalars give `[bad_options]`.
-
-## Schema version, provenance and licence
-
-* Schema: Europass XML Schema **v3.4.1** (`XSDVersion V3.4`), fetched unmodified into `schema/v3.4.1/` by `scripts/fetch-schema.sh`
-  (`EuropassSchema.xsd`, `included/`, `examples/`, `documentation/change-log.txt`).
-* Source: <https://github.com/europass/ewa-cedefop>, path `services/core/src/main/resources/schema/`.
-* The `xsd:import` locations (`europass.cedefop.europa.eu/xml/imported/...`) no longer resolve (the host serves HTML).
-  `scripts/validate.sh` redirects them with a temporary XML catalog to local copies in `schema/imported/` (fetched, plus two stand-in stubs kept in the repo)
-  (EQF and EUDrivingLicence from older schema versions, ISCED97 and NACE_COM as stand-ins; see `schema/imported/README.md`).
-* **Licence warning:** the ewa-cedefop repository does not state a licence for these schema files, so they are
-  downloaded by `scripts/fetch-schema.sh` rather than redistributed here. The GPL-3.0-or-later licence of this
-  repository covers the Rust code, docs and fictional fixtures only, not the Europass schemas.
-
-## Europass editor (Candidate XML)
-
-The current Europass editor only imports the `Candidate` XML, not the legacy `SkillsPassport` one. `candidate` is
-now the default output; `--format legacy` writes the old one (see [docs/candidate.md](docs/candidate.md)). Validation uses an unofficial schema
-(`scripts/fetch-candidate-schema.sh`, CC-BY-4.0, J0ker98/europass-cv).
+`wasm-opt` is disabled on purpose. The system `wasm-opt` is binaryen v108: with `-Os --all-features` it saves about
+7%, but the module then fails at `initSync()` (`Table.set(): function-typed object must be null`). Do not re-enable it
+without a newer binaryen and a run of a load test. wasm-pack prints a harmless warning about `strip = true`.

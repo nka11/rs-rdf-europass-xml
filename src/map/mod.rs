@@ -1,17 +1,10 @@
-//! Input -> model. The only place that knows both sides (DESIGN section 1, rule 1).
+//! Shared mapping helpers: report, limits and text composition.
 pub mod activities;
-pub mod education;
-pub mod experience;
-pub mod languages;
 pub mod person;
-pub mod projects;
-pub mod skills;
 
 use crate::date::{parse_iso_date, IsoDate};
 use crate::error::{short, Issue};
 use crate::i18n::Locale;
-use crate::input::CvInput;
-use crate::model::{DocumentInfo, LearnerInfo, SkillsPassport};
 use crate::options::Options;
 use crate::text::{clamp, sanitize_line, sanitize_multi};
 
@@ -19,9 +12,7 @@ pub const LIM_LINE: usize = 200;
 pub const LIM_HEADLINE: usize = 3000;
 pub const CAP_WORK: usize = 100;
 pub const CAP_EDU: usize = 50;
-pub const CAP_ACHIEVEMENTS: usize = 100;
 pub const CAP_LANGS: usize = 30;
-pub const CAP_WEBSITES: usize = 20;
 
 /// Outcome of reading an optional date field.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -137,6 +128,20 @@ impl Report {
         }
     }
 
+    /// Warn when a period ends before it starts (month precision when both have one).
+    pub fn check_order(&mut self, path: &str, start: DateField, end: DateField) {
+        if let (DateField::Ok(a), DateField::Ok(b)) = (start, end) {
+            let key = |d: IsoDate| (d.year, d.month.unwrap_or(0));
+            if key(b) < key(a) {
+                self.warn(
+                    "date_order",
+                    path,
+                    "the period ends before it starts".into(),
+                );
+            }
+        }
+    }
+
     /// Cap a list at `cap`, warning when entries are dropped from the tail.
     pub fn cap<T>(&mut self, path: &str, v: &[T], cap: usize) -> usize {
         if v.len() > cap {
@@ -150,70 +155,4 @@ impl Report {
             v.len()
         }
     }
-}
-
-/// Build the whole model; warnings accumulate in `rep` in input traversal order.
-pub fn build(
-    input: &CvInput,
-    rep: &mut Report,
-    creation_date: String,
-    locale: Locale,
-) -> SkillsPassport {
-    let person = input.person.clone().unwrap_or_default();
-    let identification = person::identification(&person, rep);
-    let headline = person::headline(&person, rep);
-    // traversal order of the input: person, languages, experiences, education, skills, projects
-    let linguistic = languages::linguistic(input, rep);
-    let work = experience::work_experiences(input, rep);
-    let education = education::educations(input, rep);
-    let skill_set = skills::skill_set(input, rep, linguistic);
-    let achievements = projects::achievements(input, rep);
-
-    let meta = input.meta.clone().unwrap_or_default();
-    let generator = meta
-        .generator
-        .as_deref()
-        .and_then(|g| rep.line("meta.generator", g, LIM_LINE))
-        .unwrap_or_else(|| concat!("europass-xml ", env!("CARGO_PKG_VERSION")).to_string());
-    let comment = meta
-        .source_url
-        .as_deref()
-        .and_then(|u| rep.line("meta.sourceUrl", u, 2000))
-        .map(|u| {
-            let mut c = format!("{} {}", locale.t(crate::i18n::Key::SourceComment), u);
-            if let Some(v) = meta
-                .variant
-                .as_deref()
-                .and_then(|v| rep.line("meta.variant", v, LIM_LINE))
-            {
-                c.push_str(&format!(" (variant: {v})"));
-            }
-            c
-        });
-
-    SkillsPassport {
-        locale: locale.code().to_string(),
-        schema_location_hint: rep.opts.schema_location_hint,
-        document_info: DocumentInfo {
-            creation_date,
-            generator,
-            comment,
-        },
-        learner_info: LearnerInfo {
-            identification,
-            headline,
-            work,
-            education,
-            skills: Some(skill_set).filter(|s| !skill_set_is_empty(s)),
-            achievements,
-        },
-    }
-}
-
-fn skill_set_is_empty(s: &crate::model::skills::SkillSet) -> bool {
-    s.linguistic.is_none()
-        && s.organisational.is_none()
-        && s.job_related.is_none()
-        && s.computer.is_none()
-        && s.other.is_none()
 }

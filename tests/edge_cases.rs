@@ -118,15 +118,15 @@ fn fuzzed_strings_never_panic_and_stay_well_formed() {
         let mut r = Rng(seed.wrapping_mul(0x9E37_79B9_7F4A_7C15) | 1);
         let mut v = base.clone();
         fuzz(&mut v, &mut r, "");
-        let e = export_json(&v.to_string(), &Options::legacy())
+        let e = export_json(&v.to_string(), &Options::default())
             .unwrap_or_else(|e| panic!("seed {seed}: {e}"));
         assert_well_formed(&e.xml);
-        if seed % 20 == 0 {
+        if seed % 20 == 0 && !has(&e, "person_name_missing") {
             assert_valid(&e.xml, &format!("fuzz seed {seed}"));
             validated += 1;
         }
     }
-    assert_eq!(validated, 25);
+    assert!(validated >= 20, "only {validated} outputs were validated");
 }
 
 #[test]
@@ -136,9 +136,11 @@ fn fuzzed_strings_in_the_real_cv_validate() {
         let mut r = Rng(seed | 1);
         let mut v = base.clone();
         fuzz(&mut v, &mut r, "");
-        let e = export_json(&v.to_string(), &Options::legacy()).unwrap();
+        let e = export_json(&v.to_string(), &Options::default()).unwrap();
         assert_well_formed(&e.xml);
-        assert_valid(&e.xml, &format!("real fuzz {seed}"));
+        if !has(&e, "person_name_missing") {
+            assert_valid(&e.xml, &format!("real fuzz {seed}"));
+        }
     }
 }
 
@@ -146,19 +148,27 @@ fn minimal() -> Value {
     json!({"schemaVersion":1,"lang":"en","person":{"name":"A B"},"meta":{"generatedAt":"2026-11-02T10:00:00Z"}})
 }
 
+fn has(e: &europass_xml::export::Export, code: &str) -> bool {
+    e.warnings.iter().any(|w| w.code == code)
+}
+
+/// Export, check the XML is well formed and, when the CV has a name, valid against the Candidate schema.
 fn run_valid(v: &Value) -> europass_xml::export::Export {
-    let e = export_json(&v.to_string(), &Options::legacy()).expect("export");
+    let e = export_json(&v.to_string(), &Options::default()).expect("export");
     assert_well_formed(&e.xml);
-    assert_valid(&e.xml, "edge");
+    if !has(&e, "person_name_missing") {
+        assert_valid(&e.xml, "edge");
+    }
     e
 }
 
 #[test]
 fn empty_and_minimal_inputs() {
+    // no name: still produced, but flagged (the editor rejects a CV without a name)
     let e = run_valid(
         &json!({"schemaVersion":1,"lang":"fr","person":{},"meta":{"generatedAt":"2026-11-02T10:00:00Z"}}),
     );
-    assert!(e.xml.contains("<LearnerInfo/>"));
+    assert!(has(&e, "person_name_missing"));
     let mut v = minimal();
     for k in [
         "languages",
@@ -170,7 +180,18 @@ fn empty_and_minimal_inputs() {
         v[k] = json!([]);
     }
     let e = run_valid(&v);
-    assert!(!e.xml.contains("<WorkExperienceList>") && !e.xml.contains("<Skills>"));
+    assert!(!e.xml.contains("<EmploymentHistory>") && !e.xml.contains("<Skills>"));
+    assert!(e.warnings.is_empty());
+}
+
+#[test]
+fn a_single_name_is_the_family_name() {
+    let mut v = minimal();
+    v["person"]["name"] = json!("Madonna");
+    let e = run_valid(&v);
+    assert!(has(&e, "name_single"));
+    assert!(e.xml.contains("<hr:FamilyName>Madonna</hr:FamilyName>"));
+    assert!(e.xml.contains("<oa:GivenName></oa:GivenName>"));
 }
 
 #[test]
@@ -182,24 +203,13 @@ fn list_caps() {
             .collect(),
     );
     let e = run_valid(&v);
-    assert_eq!(e.xml.matches("<WorkExperience>").count(), 100);
+    assert_eq!(e.xml.matches("<PositionHistory>").count(), 100);
     assert!(e
         .warnings
         .iter()
         .any(|w| w.code == "list_truncated" && w.path == "experiences"));
-    let mut v = minimal();
-    v["skills"] = Value::Array(
-        (0..5000)
-            .map(|i| json!({"label": format!("skill number {i}"), "category": "TechnicalSkill"}))
-            .collect(),
-    );
-    let e = run_valid(&v);
-    assert!(e.warnings.iter().any(|w| w.code == "text_truncated"));
-    let desc_start = e.xml.find("<Computer>").unwrap();
-    let desc = &e.xml[desc_start..e.xml[desc_start..].find("</Computer>").unwrap() + desc_start];
-    assert!(desc.chars().count() < 6100 && !desc.contains('\u{2026}'));
     // max_experiences option
-    let o = Options::from_json(Some(r#"{"maxExperiences":3,"format":"legacy"}"#)).unwrap();
+    let o = Options::from_json(Some(r#"{"maxExperiences":3}"#)).unwrap();
     let mut v = minimal();
     v["experiences"] = Value::Array(
         (0..10)
@@ -210,7 +220,7 @@ fn list_caps() {
         export_json(&v.to_string(), &o)
             .unwrap()
             .xml
-            .matches("<WorkExperience>")
+            .matches("<PositionHistory>")
             .count(),
         3
     );
@@ -225,14 +235,16 @@ fn dates_and_current() {
         {"id":"c","role":"R","start":"2020-01-01","end":"20014-12-01"}
     ]);
     let e = run_valid(&v);
-    assert_eq!(e.xml.matches("<Current>true</Current>").count(), 1);
-    assert_eq!(e.xml.matches("<To ").count(), 1);
-    assert!(e.warnings.iter().any(|w| w.code == "date_order"));
+    // "a" is current and has no end written; "b" ends; "c" has an unusable end date and so is neither
+    assert_eq!(e.xml.matches("<hr:CurrentIndicator>true<").count(), 1);
+    assert_eq!(e.xml.matches("<eures:EndDate>").count(), 1);
+    assert!(has(&e, "date_order"));
     assert!(e
         .warnings
         .iter()
         .any(|w| w.code == "date_invalid" && w.path == "experiences[2].end"));
-    assert!(!e.xml.contains("month=\"03\""));
+    // month precision by default: no day in the output
+    assert!(!e.xml.contains("2020-01-01"));
 }
 
 #[test]
@@ -241,9 +253,11 @@ fn urls_and_emails_are_screened() {
     v["person"]["websites"] = json!([{"url":"javascript:alert(1)"},{"url":"file:///etc/passwd"},{"url":"https://ok.example.org/p?q=1#f"}]);
     v["person"]["email"] = json!("nodomain@host");
     let e = run_valid(&v);
-    assert_eq!(e.xml.matches("<Website>").count(), 1);
+    assert_eq!(e.xml.matches("<ChannelCode>Web</ChannelCode>").count(), 1);
     assert!(
-        !e.xml.contains("javascript") && !e.xml.contains("passwd") && !e.xml.contains("<Email>")
+        !e.xml.contains("javascript")
+            && !e.xml.contains("passwd")
+            && !e.xml.contains("<ChannelCode>Email")
     );
 }
 
@@ -256,19 +270,21 @@ fn skills_accept_strings_and_objects() {
 }
 
 #[test]
-fn unknown_keys_ignored_and_ascii_hyphen_bullets() {
+fn unknown_keys_ignored_and_bullets_become_a_list() {
     let mut v = minimal();
     v["zzz"] = json!({"a": [1, 2, 3]});
     v["person"]["extra"] = json!(true);
     v["experiences"] = json!([{"id":"a","role":"R","start":"2020-01-01","description":"d","bullets":["one","two"],"future":1}]);
     let e = run_valid(&v);
-    assert!(e.xml.contains("d\n- one\n- two"));
+    assert!(e.xml.contains(
+        "&lt;p&gt;d&lt;/p&gt;&lt;ul&gt;&lt;li&gt;one&lt;/li&gt;&lt;li&gt;two&lt;/li&gt;&lt;/ul&gt;"
+    ));
 }
 
 #[test]
 fn hostile_text_is_escaped_not_interpreted() {
     let mut v = minimal();
-    v["person"]["name"] = json!("A </Surname><Evil/> B & C");
+    v["person"]["name"] = json!("A </hr:FamilyName><Evil/> B & C");
     v["person"]["headline"] = json!("]]> <![CDATA[ x ]]>");
     let e = run_valid(&v);
     assert!(!e.xml.contains("<Evil/>"));
@@ -281,8 +297,8 @@ fn illegal_chars_are_removed_with_a_warning() {
     let mut v = minimal();
     v["person"]["headline"] = json!("Dev\u{0}elo\u{7}per\u{FFFE}");
     let e = run_valid(&v);
-    assert!(e.xml.contains("<Label>Developer</Label>"));
-    assert!(e.warnings.iter().any(|w| w.code == "text_sanitized"));
+    assert!(e.xml.contains("Developer"));
+    assert!(has(&e, "text_sanitized"));
 }
 
 #[test]
@@ -290,7 +306,7 @@ fn long_text_is_truncated_with_ellipsis_on_a_scalar_boundary() {
     let mut v = minimal();
     v["person"]["headline"] = json!("é😀 ".repeat(2000));
     let e = run_valid(&v);
-    assert!(e.warnings.iter().any(|w| w.code == "text_truncated"));
+    assert!(has(&e, "text_truncated"));
     assert!(e.xml.contains('\u{2026}'));
     let mut v = minimal();
     v["person"]["name"] = json!("x".repeat(10_000));
@@ -310,6 +326,14 @@ fn fr_and_en_differ_only_by_labels() {
     v["lang"] = json!("fr");
     let fr = run_valid(&v).xml;
     assert_ne!(en, fr);
-    assert!(en.contains("<Label>Position</Label>") && fr.contains("<Label>Poste</Label>"));
+    assert!(en.contains("languageCode=\"en\"") && fr.contains("languageCode=\"fr\""));
     assert!(en.contains("Skills: Go") && fr.contains("Compétences : Go"));
+}
+
+#[test]
+fn a_position_title_replaces_a_missing_role_and_is_sanitised() {
+    let mut v = minimal();
+    v["experiences"] = json!([{"id":"a","start":"2020-01-01","organization":"Org","positions":[{"title":"Lead\u{1F} dev"}]}]);
+    let e = run_valid(&v);
+    assert!(e.xml.contains(">Lead dev</PositionTitle>"), "{}", e.xml);
 }

@@ -1,7 +1,8 @@
 # CV input contract for the `europass-xml` crate
 
 Status: proposal. Describes the language-resolved JSON document that the Rust/WASM crate consumes
-to produce a Europass XML CV (Europass XML Schema v3.4.1, root `SkillsPassport`).
+to produce a Europass **Candidate** XML CV (see [candidate.md](candidate.md) and [terms.md](terms.md)).
+Note: the XSD element paths quoted below come from the legacy `SkillsPassport` schema, which this crate no longer writes; the JSON fields themselves are current.
 
 Sources read for this contract: `src/lib/semcv/models.ts`, all of `src/lib/semcv/adapters/`,
 `src/lib/semcv/pdfprint/typstMarkup.ts` and `ATSCV_typst.ts` (the existing consumer),

@@ -27,7 +27,6 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
-      # src/codesets.rs is generated and excluded with #[rustfmt::skip]
       - run: cargo fmt --check
 
   clippy:
@@ -46,7 +45,7 @@ jobs:
         run: cargo clippy --locked --target wasm32-unknown-unknown --lib -- -D warnings
 
   test:
-    name: tests (XSD validation)
+    name: tests (Candidate schema validation)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -54,10 +53,6 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Install xmllint
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils
-      - name: Fetch the Europass XSDs (not stored in the repo)
-        run: scripts/fetch-schema.sh
-        env:
-          GH_TOKEN: ${{ github.token }}
       - name: Fetch the unofficial Candidate XSD (CC-BY-4.0, not stored in the repo)
         run: scripts/fetch-candidate-schema.sh
       - name: cargo test

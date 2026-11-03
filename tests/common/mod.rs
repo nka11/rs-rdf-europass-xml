@@ -1,4 +1,4 @@
-//! Shared helpers: fixture loading and XSD validation through scripts/validate.sh.
+//! Shared helpers: fixture loading and validation against the unofficial Candidate schema.
 #![allow(dead_code)]
 use std::path::{Path, PathBuf};
 use std::process::Command;
@@ -18,7 +18,7 @@ pub fn golden_path(name: &str) -> PathBuf {
 }
 
 pub fn export_default(json: &str) -> europass_xml::export::Export {
-    europass_xml::export::export_json(json, &europass_xml::options::Options::legacy())
+    europass_xml::export::export_json(json, &europass_xml::options::Options::default())
         .expect("export")
 }
 
@@ -28,26 +28,27 @@ pub fn xmllint_available() -> bool {
 
 static COUNTER: AtomicUsize = AtomicUsize::new(0);
 
-/// Validate against the vendored Europass XSD v3.4.1 with scripts/validate.sh.
+/// Validate against the Candidate schema (scripts/fetch-candidate-schema.sh) with scripts/validate-candidate.sh.
 /// `Ok(true)` = validated, `Ok(false)` = skipped because xmllint is missing (loud message).
 /// With `REQUIRE_XMLLINT=1` a missing xmllint is an error.
 pub fn validate_with_xmllint(xml: &str) -> Result<bool, String> {
-    if !xmllint_available() {
+    if !xmllint_available()
+        || !root()
+            .join("schema/candidate/europass-candidate.xsd")
+            .exists()
+    {
         if std::env::var("REQUIRE_XMLLINT").as_deref() == Ok("1") {
-            return Err("xmllint missing and REQUIRE_XMLLINT=1".into());
+            return Err("xmllint or the Candidate schema is missing and REQUIRE_XMLLINT=1".into());
         }
-        eprintln!("SKIP: xmllint missing");
+        eprintln!("SKIP: xmllint or Candidate schema missing");
         return Ok(false);
-    }
-    if !root().join("schema/v3.4.1/EuropassSchema.xsd").exists() {
-        return Err("Europass XSD not found: run scripts/fetch-schema.sh first".into());
     }
     let dir = Path::new(env!("CARGO_TARGET_TMPDIR"));
     let n = COUNTER.fetch_add(1, Ordering::SeqCst);
     let file = dir.join(format!("out-{}-{n}.xml", std::process::id()));
     std::fs::write(&file, xml).map_err(|e| e.to_string())?;
     let out = Command::new("bash")
-        .arg(root().join("scripts/validate.sh"))
+        .arg(root().join("scripts/validate-candidate.sh"))
         .arg(&file)
         .output()
         .map_err(|e| e.to_string())?;
@@ -71,7 +72,7 @@ pub fn assert_well_formed(xml: &str) {
     assert!(xml.ends_with(">\n") && !xml.ends_with(">\n\n"));
     assert!(!xml.contains("<![CDATA["));
     assert!(!xml.contains("<!--"));
-    for c in xml.chars() {
+    for (pos, c) in xml.char_indices() {
         let u = c as u32;
         let ok = c == '\t'
             || c == '\n'
@@ -79,7 +80,11 @@ pub fn assert_well_formed(xml: &str) {
             || (0x20..=0xD7FF).contains(&u)
             || (0xE000..=0xFFFD).contains(&u)
             || u >= 0x10000;
-        assert!(ok && !(0x7F..=0x9F).contains(&u), "illegal char U+{u:04X}");
+        assert!(
+            ok && !(0x7F..=0x9F).contains(&u),
+            "illegal char U+{u:04X} near {:?}",
+            &xml[pos.saturating_sub(60)..pos]
+        );
     }
     let body = xml.split_once("?>").map(|x| x.1).unwrap_or("");
     let mut stack: Vec<String> = Vec::new();

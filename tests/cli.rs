@@ -8,16 +8,10 @@ fn cli() -> Command {
 }
 
 #[test]
-fn writes_valid_legacy_xml_to_a_file() {
+fn writes_valid_xml_to_a_file() {
     let out = std::path::Path::new(env!("CARGO_TARGET_TMPDIR")).join("cli-out.xml");
     let input = common::root().join("tests/fixtures/cv_full_en.json");
-    let st = cli()
-        .arg(&input)
-        .args(["--format", "legacy"])
-        .arg("-o")
-        .arg(&out)
-        .output()
-        .unwrap();
+    let st = cli().arg(&input).arg("-o").arg(&out).output().unwrap();
     assert!(
         st.status.success(),
         "{}",
@@ -63,20 +57,15 @@ fn usage_and_missing_file_exit_2() {
 }
 
 #[test]
-fn candidate_is_the_default_format() {
+fn the_output_is_the_candidate_xml() {
     let input = common::root().join("tests/fixtures/cv_min.json");
     let o = cli().arg(&input).output().unwrap();
     assert!(String::from_utf8_lossy(&o.stdout).contains("<Candidate "));
-    let l = cli()
-        .arg(&input)
-        .args(["--format", "legacy"])
-        .output()
-        .unwrap();
-    assert!(String::from_utf8_lossy(&l.stdout).contains("<SkillsPassport "));
+    // the legacy format flag is gone
     assert_eq!(
         cli()
             .arg(&input)
-            .args(["--format", "x"])
+            .args(["--format", "legacy"])
             .output()
             .unwrap()
             .status

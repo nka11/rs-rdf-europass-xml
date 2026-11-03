@@ -2,7 +2,7 @@
 name = "europass-xml"
 version = "0.1.0"
 edition = "2021"
-description = "CV JSON to Europass XML CV (XML Schema v3.4.1), compiled to WebAssembly with wasm-bindgen"
+description = "CV JSON to the Europass Candidate XML, with a WebAssembly build (wasm-bindgen)"
 license = "GPL-3.0-or-later"
 repository = "https://github.com/nka11/rs-rdf-europass-xml"
 publish = false

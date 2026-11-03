@@ -110,11 +110,4 @@ impl Locale {
             }
         }
     }
-
-    pub fn eqf_label(self, n: i64) -> String {
-        match self {
-            Locale::En => format!("EQF {n}"),
-            Locale::Fr => format!("CEC {n}"),
-        }
-    }
 }

@@ -3,9 +3,6 @@
 //! unofficial schema fetched by scripts/fetch-candidate-schema.sh (skipped when absent unless REQUIRE_XMLLINT=1).
 mod common;
 use common::*;
-use europass_xml::export::export_json;
-use europass_xml::options::{Format, Options};
-use std::process::Command;
 
 const CASES: &[(&str, &str)] = &[
     ("cv_full_en.json", "candidate_full_en.xml"),
@@ -15,37 +12,11 @@ const CASES: &[(&str, &str)] = &[
 ];
 
 fn candidate(json: &str) -> europass_xml::export::Export {
-    let opts = Options {
-        format: Format::Candidate,
-        ..Options::default()
-    };
-    export_json(json, &opts).expect("export")
+    export_default(json)
 }
 
 fn validate(xml: &str) -> Result<bool, String> {
-    let schema = root().join("schema/candidate/europass-candidate.xsd");
-    let required = std::env::var("REQUIRE_XMLLINT").as_deref() == Ok("1");
-    if !xmllint_available() || !schema.exists() {
-        if required {
-            return Err("xmllint or the Candidate schema is missing and REQUIRE_XMLLINT=1".into());
-        }
-        eprintln!("SKIP: xmllint or Candidate schema missing");
-        return Ok(false);
-    }
-    let file = std::path::Path::new(env!("CARGO_TARGET_TMPDIR"))
-        .join(format!("cand-{}.xml", std::process::id()));
-    std::fs::write(&file, xml).map_err(|e| e.to_string())?;
-    let out = Command::new("bash")
-        .arg(root().join("scripts/validate-candidate.sh"))
-        .arg(&file)
-        .output()
-        .map_err(|e| e.to_string())?;
-    let _ = std::fs::remove_file(&file);
-    if out.status.success() {
-        Ok(true)
-    } else {
-        Err(String::from_utf8_lossy(&out.stderr).into_owned())
-    }
+    validate_with_xmllint(xml)
 }
 
 #[test]
@@ -111,8 +82,8 @@ fn deterministic() {
 }
 
 #[test]
-fn format_option_is_read_from_json() {
-    let o = Options::from_json(Some(r#"{"format":"candidate"}"#)).unwrap();
-    assert_eq!(o.format, Format::Candidate);
-    assert!(Options::from_json(Some(r#"{"format":"nope"}"#)).is_err());
+fn format_option_only_accepts_candidate() {
+    use europass_xml::options::Options;
+    assert!(Options::from_json(Some(r#"{"format":"candidate"}"#)).is_ok());
+    assert!(Options::from_json(Some(r#"{"format":"legacy"}"#)).is_err());
 }
